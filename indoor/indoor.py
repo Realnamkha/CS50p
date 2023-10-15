@@ -1,2 +1,2 @@
-word = input(" Enter your string ")
+word = input(" Enter your string ").lower()
 print(word)
