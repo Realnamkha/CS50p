@@ -8,10 +8,14 @@ def main():
 def dollars_to_float(d):
     d = d.strip("$")
     d = float(d)
+    d = round(d,1)
+    return d
 
 
 def percent_to_float(p):
-    # TODO
-
+    p = p.strip("%")
+    p = p/100
+    p = round(p,2)
+    return p
 
 main()
