@@ -1,3 +1,3 @@
 word = input("Enter your string")
-word.replace(" ","...")
+word = word.replace(" ","...")
 print(word)
