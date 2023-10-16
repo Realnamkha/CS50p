@@ -1,5 +1,5 @@
 Greetings = input("Enter your greetings").lower().strip()
-if Greetings.startswith("Hello"):
+if Greetings.startswith("hello"):
     print("$0")
 elif Greetings.startswith("H"):
     print("$20")
