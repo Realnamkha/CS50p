@@ -12,9 +12,9 @@ elif ".pdf" in fileinput:
     print("application/pdf")
 
 elif ".txt" in fileinput:
-    print("image/txt")
+    print("text/plain")
 
 elif ".zip" in fileinput:
-    print("image/zip")
+    print("application/zip")
 else:
      print("application/octet-stream")
