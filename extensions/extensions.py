@@ -9,7 +9,7 @@ elif ".png" in fileinput:
     print("image/png")
 
 elif ".pdf" in fileinput:
-    print("image/pdf")
+    print("application/pdf")
 
 elif ".txt" in fileinput:
     print("image/txt")
