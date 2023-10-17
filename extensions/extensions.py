@@ -1,6 +1,6 @@
 fileinput = input("Enter the file name with extension").lower().strip()
 if ".gif" in fileinput:
-    print("image/git")
+    print("image/gif")
 elif ".jpg" or "jpeg" in fileinput:
     print("image/jpeg")
 elif ".png" in fileinput:
