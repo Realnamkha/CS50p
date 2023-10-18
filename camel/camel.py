@@ -1,7 +1,7 @@
 camelCase = input("Enter the variable ").strip()
-snake_case = ""
 
 def convert(camelCase):
+    snake_case = ""
     for i in range(len(camelCase)):
         if camelCase[i].isupper():
             snake_case += "_" + camelCase[i].lower()
