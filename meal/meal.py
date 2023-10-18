@@ -1,17 +1,19 @@
 hours, minutes = input("Enter the current time ").split(":")
-hours = float(hours)
+hours = int(hours)
 minutes = float(minutes)
 minutes = (minutes/60)
-l = [hours,minutes]
-s = '.'.join([str(n) for n in l])
-print(s)
+new_time = hours + minutes
 def main():
-    ...
+    convert(new_time)
 
 
 def convert(time):
-    ...
-
+    if (7 <= time <= 8):
+        print("Breakfast Time")
+    if (12 <= time <= 13):
+        print("Lunch Time")
+    if (18 <= time <= 19):
+        print("Dinner Time")
 
 if __name__ == "__main__":
     main()
