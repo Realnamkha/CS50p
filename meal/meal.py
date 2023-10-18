@@ -3,6 +3,7 @@ hours = int(hours)
 minutes = float(minutes)
 minutes = (minutes/60)
 new_time = hours + minutes
+print(new_time)
 def main():
     convert(new_time)
 
