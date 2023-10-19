@@ -4,5 +4,4 @@ for char in string:
     new_string = ""
     if char not in vowels:
         new_string +=char
-    else:
-
+print(new_string)
