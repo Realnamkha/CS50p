@@ -12,6 +12,5 @@ def is_valid(s):
     if(6<=len(s)<=2):
         return True
 
-
 main()
 
