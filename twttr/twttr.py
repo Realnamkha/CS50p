@@ -1,5 +1,8 @@
 string = input("Enter the string ").strip().lower()
 vowels = ['a','e','i','o','u']
-new_string = ""
-if string not in vowels:
-    new_string +=string
+for char in string:
+    new_string = ""
+    if char not in vowels:
+        new_string +=char
+    else:
+
