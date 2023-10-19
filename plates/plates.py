@@ -11,6 +11,7 @@ def is_valid(s):
         return True
     if(6<=len(s)<=2):
         return True
-
+    for char in s:
+        
 main()
 
