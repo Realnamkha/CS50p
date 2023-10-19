@@ -12,6 +12,9 @@ def is_valid(s):
     if(6<=len(s)<=2):
         return True
     for char in s:
-        
+        if char.isnumeric():
+            if char[0] == 0:
+                return False
+
 main()
 
