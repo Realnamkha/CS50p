@@ -6,5 +6,5 @@ while amount_due>=0:
         amount_due = amount_due - amount_inserted
         print(f"Amount Due:{amount_due}")
 if amount_due<=0:
-    print(f"Change Owned:)
+    print(f"Change Owned:{amount_due}")
 
