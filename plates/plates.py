@@ -13,7 +13,7 @@ def is_valid(s):
         return True
     for char in s:
         if char.isnumeric():
-            print(char[0])
+            print(s[char])
 
 main()
 
