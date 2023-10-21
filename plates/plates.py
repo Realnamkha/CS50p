@@ -12,9 +12,8 @@ def first_num(s):
             # check if first number is zero
             if character=='0':
                 return False
-            first_num = s.index(character)
             break
-        return first_num
+        
 
 def is_valid(s):
     valid = False
