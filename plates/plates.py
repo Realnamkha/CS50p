@@ -24,11 +24,12 @@ def is_valid(s):
                 for character in s[2:]:
                     if character.isalpha():
                         continue
-                    elif(first_num(s) == False):
-                        valid = True
 
                     elif character.isdigit():
-                        valid = True
+                        if(first_num(s) == False):
+                            valid = True
+                        else:
+                            valid = True
                     break
     return valid
 
