@@ -8,29 +8,20 @@ def main():
 
 def is_valid(s):
     valid = False
-    if (6<=len(s)<=2):
-        valid = True
-
-    elif not s.isalnum():
-        valid = False
-
-    elif (s[0].isalpha() and s[1].isalpha()):
-        valid = True
-
-    first_num=len(s)-1
-    for character in s:
-        if character.isnumeric():
-            if character=='0':
-                valid = False
-            first_num = s.index(character)
-            break
-    for character in s:
-        if s.index(character)<= first_num:
-            pass
-        else:
-            if character.isalpha():
-                valid = False
+    if len(s) > 1 and len(s) < 7:
+        start = s[0:2]
+        if s.isalpha():
+            valid = True
+        elif s.isalnum() and start.isalpha():
+            if not s[-1].isalpha():
+                for character in s[2:]:
+                    if character.isalpha():
+                        continue
+                    elif character.isdigit() and character != "0":
+                        valid = True
+                    break
     return valid
 
 
-main()
+if __name__ == "__main__":
+    main()
