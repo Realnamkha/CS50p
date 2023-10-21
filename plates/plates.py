@@ -9,7 +9,7 @@ def first_num(s):
     for character in s:
         if character.isnumeric():
             if character=='0':
-                valid = False
+                return False
             break
     return valid
 
@@ -26,7 +26,7 @@ def is_valid(s):
                         continue
                     elif character.isdigit():
                         valid = True
-    valid = first_num(s)
+                            valid = first_num(s)
     return valid
 
 
