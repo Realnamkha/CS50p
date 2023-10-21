@@ -27,6 +27,7 @@ def is_valid(s):
                         continue
                     elif character.isdigit():
                         valid = True
+                    break
                 # valid = first_num(s)
     return valid
 
