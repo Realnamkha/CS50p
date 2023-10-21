@@ -6,12 +6,13 @@ def main():
         print("Invalid")
 
 def first_num(s):
+    valid = True
     for character in s:
         if character.isnumeric():
             if character=='0':
-                return False
+                valid = False
             break
-
+    return valid
 
 def is_valid(s):
     valid = False
@@ -26,10 +27,7 @@ def is_valid(s):
                         continue
 
                     elif character.isdigit():
-                        if(first_num(s) == False):
-                            valid = True
-                        else:
-                            valid = True
+                        valid = first_num(s)
                     break
     return valid
 
