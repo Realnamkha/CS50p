@@ -6,7 +6,6 @@ def main():
         print("Invalid")
 
 def first_num(s):
-    valid = False
     for character in s:
         if character.isnumeric():
             if character=='0':
