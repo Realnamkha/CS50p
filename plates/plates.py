@@ -11,6 +11,9 @@ def is_valid(s):
     if (6<=len(s)<=2):
         valid = True
 
+    elif not s.isalnum():
+        valid = False
+
     elif (s[0].isalpha() and s[1].isalpha()):
         valid = True
 
