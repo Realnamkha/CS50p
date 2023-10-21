@@ -25,7 +25,7 @@ def is_valid(s):
                 for character in s[2:]:
                     if character.isalpha():
                         continue
-                elif character.isdigit():
+                    elif character.isdigit():
                         valid = True
     valid = first_num(s)
     return valid
