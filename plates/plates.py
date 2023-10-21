@@ -7,13 +7,18 @@ def main():
 
 
 def is_valid(s):
-    if s[:2].isalpha():
-        return True
     if(6<=len(s)<=2):
-        return True
-    for char in s:
-        if char.isnumeric():
-            print(s[char])
+        start = s[:2]
+
+        if s.isalpha():
+            return True
+        elif s.isalnum() and start.isalpha():
+            if not s[-1].isalpha():
+                for char in s[2:]:
+                      if char.isalpha():
+                        continue
+                      elif char.isnumeric()
+
 
 main()
 
