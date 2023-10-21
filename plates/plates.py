@@ -5,18 +5,10 @@ def main():
     else:
         print("Invalid")
 
-def first_num(s):
-    valid = True
-    for character in s:
-        if character.isnumeric():
-            if character=='0':
-                valid = False
-            break
-    return valid
 
 def is_valid(s):
     valid = False
-    if (6<=len(s)<=2):
+    if len(s) > 1 and len(s) < 7:
         start = s[0:2]
         if s.isalpha():
             valid = True
@@ -25,10 +17,9 @@ def is_valid(s):
                 for character in s[2:]:
                     if character.isalpha():
                         continue
-                    elif character.isdigit():
+                    elif character.isdigit() and character != "0":
                         valid = True
                     break
-                valid = first_num(s)
     return valid
 
 
