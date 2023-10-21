@@ -8,23 +8,33 @@ def main():
 
 def is_valid(s):
     valid = False
-    if(6<=len(s)<=2):
-        start = s[:2]
-        if s.isalpha():
-            valid = True
-        elif s.isalnum() and start.isalpha():
-            if not s[-1].isalpha():
-                for char in s[2:]:
-                      if char.isalpha():
-                        continue
-                      elif char.isnumeric():
-                          if char == "0"
-                          valid = False
-                          first_num = s.index(char)
+    if (6<=len(s)<=2):
+        valid = True
+        
+    elif not s.isalnum():
+        return False
+    # check first 2 elements are alphabets
+    elif not (s[0].isalpha() and s[1].isalpha()):
+        return False
+    #find first number
+    first_num=len(s)-1
+    for character in s:
+        if character.isnumeric():
+            # check if first number is zero
+            if character=='0':
+                return False
+            first_num = s.index(character)
+            break
+    # check if there is no alphabet after first num
+    for character in s:
+        if s.index(character)<= first_num:
+            pass
+        else:
+            if character.isalpha():
+                return False
+    #all conditions satisfied
+    return True
 
 
-                      break
-    return valid
 
 main()
-
