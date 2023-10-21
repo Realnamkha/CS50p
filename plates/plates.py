@@ -17,7 +17,10 @@ def is_valid(s):
                 for char in s[2:]:
                       if char.isalpha():
                         continue
-                      elif char.isnumeric()
+                      elif char.isnumeric() and char != "0":
+                          return True
+
+                      break
 
 
 main()
