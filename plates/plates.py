@@ -20,7 +20,8 @@ def is_valid(s):
                       elif char.isnumeric():
                           if char == "0"
                           valid = False
-                          
+                          first_num = s.index(char)
+
 
                       break
     return valid
