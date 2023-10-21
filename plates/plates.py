@@ -5,6 +5,16 @@ def main():
     else:
         print("Invalid")
 
+def first_num(s):
+    first_num=len(s)-1
+    for character in s:
+        if character.isnumeric():
+            # check if first number is zero
+            if character=='0':
+                return False
+            first_num = s.index(character)
+            break
+        return first_num
 
 def is_valid(s):
     valid = False
