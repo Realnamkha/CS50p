@@ -13,11 +13,13 @@ def is_valid(s):
             valid = True
         elif s.isalnum() and s[:2].isalpha():
                 for char in s[2:]:
-                    if char.isalpha():
-                        continue
-                    elif char.isdigit() and char != "0":
-                        valid = True
-                    break
+                    if char.isdigit():
+                        first_num = s.index(char)
+
+                        if s[first_num:].isdigit() and char != '0':
+                            valid = True
+                        else:
+                            valid = False
     return valid
 
 
