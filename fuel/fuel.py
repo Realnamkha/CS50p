@@ -14,8 +14,10 @@ def greater(X,Y):
 def get_fuel():
     while True:
         try :
-            X, Z, Y = input("Fraction: ").split()
-            fuel = XZY
+            fuel = input("Fractions: ")
+            X, Y = fuel.split("/")
+            X = int(X)
+            Y = int(Y)
             greater(X,Y)
             break
         except ValueError:
