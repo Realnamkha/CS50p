@@ -14,7 +14,7 @@ def greater(X,Y):
 def get_fuel():
     while True:
         fuel = input("Fractions: ")
-        X, Y = fuel.split("/")
+        X,Y = fuel.split("/")
         try :
             X = int(X)
             Y = int(Y)
