@@ -1,5 +1,5 @@
 def main():
-    fuel = get_fuel(X,Y)
+    fuel = get_fuel("Value of X","Value of Y")
     if (fuel<1):
         print("E")
     elif(fuel>99):
@@ -14,8 +14,8 @@ def greater(X,Y):
 def get_fuel(input1,input2):
     while True:
         try :
-            X = input1
-            Y = input2
+            X = int(input(input1))
+            Y = int(input(input2))
             fuel = X/Y
             greater(X,Y)
             break
