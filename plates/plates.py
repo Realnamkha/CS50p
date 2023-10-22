@@ -16,7 +16,7 @@ def is_valid(s):
                     if char.isdigit():
                         first_num = s.index(char)
 
-                        if s[first_num:].isdigit() and char != '0':
+                        if s[first_num:].isdigit() and int(char) != 0:
                             valid = True
                         else:
                             valid = False
