@@ -8,16 +8,14 @@ def main():
 
 def is_valid(s):
     valid = False
-    if len(s) > 1 and len(s) < 7:
-        start = s[0:2]
+    if (2<=len(s)<=6):
         if s.isalpha():
             valid = True
-        elif s.isalnum() and start.isalpha():
-            if not s[-1].isalpha():
-                for character in s[2:]:
-                    if character.isalpha():
+        elif s.isalnum() and s[:2].isalpha():
+                for char in s[2:]:
+                    if char.isalpha():
                         continue
-                    elif character.isdigit() and character != "0":
+                    elif char.isdigit() and char != "0":
                         valid = True
                     break
     return valid
