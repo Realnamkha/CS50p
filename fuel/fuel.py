@@ -15,7 +15,6 @@ def get_fuel():
     while True:
         fuel = input("Fractions: ")
         X, Y = fuel.split("/")
-        print(X,Y)
         try :
             X = int(X)
             Y = int(Y)
