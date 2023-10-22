@@ -7,20 +7,18 @@ def main():
 
 
 def is_valid(s):
-    valid = False
     if (2<=len(s)<=6):
         if s.isalpha():
-            valid = True
+            return True
         elif s.isalnum() and s[:2].isalpha():
                 for char in s[2:]:
                     if char.isdigit():
                         first_num = s.index(char)
 
                         if s[first_num:].isdigit() and int(char) != 0:
-                            valid = True
+                            return True
                         else:
-                            valid = False
-    return valid
+                            return False
 
 
 if __name__ == "__main__":
