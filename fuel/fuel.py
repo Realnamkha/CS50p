@@ -15,3 +15,5 @@ while True:
         print("Y cannot be zero")
     except Exception as e:
         print(e)
+
+fuel = fuel *100
