@@ -1,6 +1,4 @@
 def main():
-    X = int(input("Enter the value of X: "))
-    Y = int(input("Enter the value of Y: "))
     fuel = get_fuel(X,Y)
     if (fuel<1):
         print("E")
