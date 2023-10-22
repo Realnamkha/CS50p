@@ -9,9 +9,5 @@ try :
     greater(X,Y)
 except ValueError:
     print("X or Y is not an integer")
-except def check_age(age):
-    if age < 18:
-        raise Exception(" Age must be 18 or above. ")
-    else:
-        print(" Age is valid. ")   as e:
+except Exception as e:
     print(e)
