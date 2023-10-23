@@ -1,3 +1,8 @@
+import re
+def titlecase(s):
+    return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",
+                  lambda mo: mo.group(0).capitalize(),s)
+
 items = {
     "Baja Taco": 4.00,
     "Burrito": 7.50,
@@ -9,4 +14,8 @@ items = {
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
-print(items)
+while True:
+    food = input("Food: ")
+    food = titlecase(food)
+    total = 0
+    for item in items:
