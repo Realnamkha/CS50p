@@ -9,4 +9,4 @@ while True:
 items.sort()
 for item in items:
       count = items.count('item')
-      print(f"{count} item")
+      print(f"{count} {item}")
