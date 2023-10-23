@@ -15,11 +15,17 @@ items = {
     "Tortilla Salad": 8.00
 }
 while True:
-    food = input("Food: ")
-    food = titlecase(food)
     total = 0
     for item in items:
-        if (food==item):
-            total += items[item]
-            print(f"Total: ${total:.2f}")
-        elif(food == ")
+        try:
+            food = input("Food: ")
+        except EOFError:
+            break
+        else:
+            food = titlecase(food)
+            if (food == item):
+                total += items[item]
+                print(f"Total: ${total:.2f}")
+            else:
+                continue
+            
