@@ -19,7 +19,7 @@ while True:
         try:
             food = input("Food: ")
         except EOFError:
-            break
+            print("PROGRAM EXIT")
         else:
             food = titlecase(food)
             for item in items:
