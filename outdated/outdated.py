@@ -23,7 +23,7 @@ try:
             raise Exception("Format is incorrect")
     else:
         month,year = date.split(',')
-        day,month = month.split(' ')
+        month,day = month.split(' ')
         if month in months:
              month = months.index(month)
         year = int(year)
