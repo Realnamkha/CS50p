@@ -20,7 +20,7 @@ def get_fuel():
             Y = int(Y)
             fuel = X/Y
             if X>Y:
-                raise Exception("X is greater than Y)
+                raise Exception("X is greater than Y")
             break
         except ValueError:
             print("X or Y is not an integer")
