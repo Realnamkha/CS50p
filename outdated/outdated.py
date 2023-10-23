@@ -12,6 +12,6 @@
     "November",
     "December"
 ]
-try:
-    Date = input("DATE: ")
-    
+
+month,day,year = input("DATE: ").split('-')
+print(month,day,year)
