@@ -7,10 +7,6 @@ def main():
     else:
         print(f"{fuel:.0f}%")
 
-def greater(X,Y):
-    if X>Y:
-        raise Exception("X is greater than Y")
-
 def get_fuel():
     while True:
         try :
