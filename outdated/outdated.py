@@ -32,6 +32,8 @@ while True:
             year = int(year)
     except ValueError():
         print("ValueError has occureed")
+    except Exception as e:
+         print(e)
     finally:
             print(f"{year:04}-{month:02}-{day:02}")
             break
