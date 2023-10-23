@@ -8,5 +8,5 @@ while True:
 
 items.sort()
 for item in items:
-      count = items.count('item')
+      count = items.count(items[item])
       print(f"{count} {item}")
