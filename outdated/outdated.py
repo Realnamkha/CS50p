@@ -29,7 +29,7 @@ while True:
             month,day = month.split(' ')
             if month in months:
                 month = months.index(month) + 1
-            else:
+            if (month>12 or day>31 or year<1):
                 raise Exception("Out of Range")
             year = int(year)
             day = int(day)
