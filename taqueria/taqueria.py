@@ -19,3 +19,8 @@ while True:
     food = titlecase(food)
     total = 0
     for item in items:
+        if (food==item):
+            total += items[item]
+            print(f"Total: ${total:.2f}")
+        elif
+            
