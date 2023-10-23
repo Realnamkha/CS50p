@@ -5,5 +5,3 @@ while True:
         except EOFError:
             print("PROGRAM EXIT")
             break
-
-print(items)
