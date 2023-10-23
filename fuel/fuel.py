@@ -1,7 +1,5 @@
 def main():
-    fuel = input("Fractions: ")
-    X,Y = fuel.split("/")
-    fuel = get_fuel(X,Y)
+    fuel = get_fuel()
     if (fuel<1):
         print("E")
     elif(fuel>99):
@@ -13,11 +11,13 @@ def greater(X,Y):
     if X>Y:
         raise Exception("X is greater than Y")
 
-def get_fuel(input1,input2):
+def get_fuel():
     while True:
         try :
-            X = int(input(input1))
-            Y = int(input(input2))
+            fuel = input("Fractions: ")
+            X,Y = fuel.split("/")
+            X = int(X)
+            Y = int(Y)
             fuel = X/Y
             greater(X,Y)
             break
