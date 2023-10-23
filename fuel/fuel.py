@@ -1,8 +1,8 @@
 def main():
     fuel = get_fuel()
-    if (fuel<1):
+    if (fuel<=1):
         print("E")
-    elif(fuel>99):
+    elif(fuel>=99):
         print("F")
     else:
         print(f"{fuel:.0f}%")
