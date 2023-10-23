@@ -18,6 +18,7 @@ def get_fuel(input1,input2):
         try :
             X = int(input(input1))
             Y = int(input(input2))
+            fuel = X/Y
             greater(X,Y)
             break
         except ValueError:
