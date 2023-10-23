@@ -4,7 +4,6 @@ while True:
         try:
               items += input().upper().split("/n")
         except EOFError:
-            print("PROGRAM EXIT")
             break
 
 items.sort()
