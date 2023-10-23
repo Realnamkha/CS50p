@@ -1,3 +1,6 @@
+def remove_duplicates(x):
+  return list(dict.fromkeys(x))
+
 items = []
 while True:
         try:
