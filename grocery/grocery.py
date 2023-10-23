@@ -8,4 +8,4 @@ while True:
 
 items.sort()
 for item in items:
-      
+      print(item)
