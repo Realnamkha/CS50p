@@ -25,8 +25,8 @@ def get_fuel():
             print("X or Y is not an integer")
         except ZeroDivisionError:
             print("Y cannot be zero")
-        # except Exception as e:
-        #     print(e)
+        except Exception as e:
+            print(e)
 
     fuel = fuel *100
     fuel = round(fuel,1)
