@@ -16,13 +16,13 @@ items = {
 }
 while True:
     total = 0
-    for item in items:
         try:
             food = input("Food: ")
         except EOFError:
             break
         else:
             food = titlecase(food)
-            if (food == item):
+            for item in items:
+                if (food == item):
                 total += items[item]
                 print(f"Total: ${total:.2f}")
