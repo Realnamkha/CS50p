@@ -30,7 +30,7 @@ while True:
             year = int(year)
             day = int(day)
             year = int(year)
-    except ValueError():
+    except ValueError:
         print("ValueError has occureed")
     except Exception as e:
          print(e)
