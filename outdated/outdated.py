@@ -13,5 +13,7 @@
     "December"
 ]
 
-month,day,year = input("DATE: ").split('-')
-print(month,day,year)
+date = input("DATE: ")
+month,day,year = date.split('/')
+if(month>12 or day>31 or year<1):
+    raise Exception(")
