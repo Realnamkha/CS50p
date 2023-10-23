@@ -14,16 +14,3 @@ items = {
     "Tortilla Salad": 8.00
 }
 total = 0
-while True:
-        try:
-            food = input("Food: ")
-        except EOFError:
-            print("PROGRAM EXIT")
-            break
-        else:
-            food = titlecase(food)
-            if food in items:
-                total += items[food]
-                print(f"Total: ${total:.2f}")
-            else:
-                 print("Item not found in menu")
