@@ -1,4 +1,4 @@
-[
+months = [
     "January",
     "February",
     "March",
@@ -24,6 +24,11 @@ try:
     else:
         month,year = date.split(',')
         day,month = month.split(' ')
+        if month in months:
+             month = months.index(month)
+        year = int(year)
+        day = int(day)
+        year = int(year)
 except ValueError():
     print("ValueError has occrued")
 finally:
