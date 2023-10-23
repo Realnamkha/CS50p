@@ -16,4 +16,4 @@
 date = input("DATE: ")
 month,day,year = date.split('/')
 if(month>12 or day>31 or year<1):
-    raise Exception(")
+    raise Exception("Format is incorrect")
