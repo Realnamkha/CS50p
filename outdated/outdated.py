@@ -20,8 +20,10 @@ while True:
             month = int(month)
             day = int(day)
             year = int(year)
-            if(month>12 or day>31 or year<1):
-                raise Exception("Format is incorrect")
+            if (month>12 or day>31 or year<1):
+                raise Exception("Out of Range")
+            print(f"{year:04}-{month:02}-{day:02}")
+            break
         else:
             month,year = date.split(',')
             month,day = month.split(' ')
@@ -30,10 +32,9 @@ while True:
             year = int(year)
             day = int(day)
             year = int(year)
+              print(f"{year:04}-{month:02}-{day:02}")
+            break
     except ValueError:
         print("ValueError has occureed")
     except Exception as e:
-         print(e)
-    finally:
-            print(f"{year:04}-{month:02}-{day:02}")
-            break
+        print(e)
