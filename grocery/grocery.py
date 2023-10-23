@@ -1,6 +1,4 @@
-def remove_duplicates(x):
-  return list(dict.fromkeys(x))
-
+from collections import Counter
 items = []
 while True:
         try:
@@ -10,6 +8,10 @@ while True:
             break
 
 items.sort()
-for item in items:
-      count = items.count(item)
-      print(f"{count} {item}")
+item_counts = Counter(items)
+
+unique_items = list(item_counts.keys())
+
+for item in unique_items:
+    count = item_counts[item]
+    print(f"{count} {item}")
