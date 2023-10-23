@@ -26,4 +26,5 @@ while True:
             if food in items:
                 total += items[food]
                 print(f"Total: ${total:.2f}")
-            
+            else:
+                 print("Item not found in menu")
