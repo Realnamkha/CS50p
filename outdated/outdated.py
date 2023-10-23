@@ -19,7 +19,6 @@ try:
         month = int(month)
         day = int(day)
         year = int(year)
-        print(f"{year:04}-{month:02}-{day:02}")
         if(month>12 or day>31 or year<1):
             raise Exception("Format is incorrect")
     else:
@@ -27,3 +26,5 @@ try:
         day,month = month.split(' ')
 except ValueError():
     print("ValueError has occrued")
+finally:
+        print(f"{year:04}-{month:02}-{day:02}")
