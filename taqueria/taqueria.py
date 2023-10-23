@@ -22,7 +22,6 @@ while True:
             print("PROGRAM EXIT")
         else:
             food = titlecase(food)
-            for item in items:
-                if (food == item):
-                total += items[item]
+            if food in items:
+                total += items[food]
                 print(f"Total: ${total:.2f}")
