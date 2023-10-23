@@ -29,11 +29,11 @@ while True:
             month,day = month.split(' ')
             if month in months:
                 month = months.index(month) + 1
-            if (month>12 or day>31 or year<1):
-                raise Exception("Out of Range")
             year = int(year)
             day = int(day)
             year = int(year)
+            if (month>12 or day>31 or year<1):
+                raise Exception("Out of Range")
             print(f"{year:04}-{month:02}-{day:02}")
             break
     except ValueError:
