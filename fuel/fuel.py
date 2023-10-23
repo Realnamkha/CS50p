@@ -16,8 +16,8 @@ def greater(X,Y):
 def get_fuel(input1,input2):
     while True:
         try :
-            X = int(input())
-            Y = int(Y)
+            X = int(input(input1))
+            Y = int(input(input2))
             greater(X,Y)
             break
         except ValueError:
