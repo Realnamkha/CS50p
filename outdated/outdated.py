@@ -25,7 +25,7 @@ try:
         month,year = date.split(',')
         month,day = month.split(' ')
         if month in months:
-             month = months.index(month)
+             month = months.index(month) + 1
         year = int(year)
         day = int(day)
         year = int(year)
