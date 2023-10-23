@@ -26,6 +26,3 @@ while True:
             if (food == item):
                 total += items[item]
                 print(f"Total: ${total:.2f}")
-            else:
-                continue
-            
