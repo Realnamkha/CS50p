@@ -1,4 +1,4 @@
-{
+items = {
     "Baja Taco": 4.00,
     "Burrito": 7.50,
     "Bowl": 8.50,
@@ -9,3 +9,5 @@
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
+for item in items:
+    print(item)
