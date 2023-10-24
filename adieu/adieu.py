@@ -6,4 +6,4 @@ while True:
 
     except EOFError:
             break
-print(f"Adieu, adieu, to {user}")
+print(f"\nAdieu, adieu, to {user}")
