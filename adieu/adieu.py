@@ -7,4 +7,12 @@ while True:
 
     except EOFError:
             break
-print(f"\nAdieu, adieu, to {user[0] ,user[1], user[2]}")
+
+if len(user) == 1:
+        print(f"Adieu, adieu, to {user[0]}")
+elif len(user) == 2:
+        print(f"Adieu, adieu, to {user[0]} and {user[1]}")
+else:
+    farewell = f"Adieu, {', '.join(names[:-1])}, and {names[-1]}!"
+    farewell = farewell.replace(", ", ", " * (len(names) - 2))
+    print(farewell)
