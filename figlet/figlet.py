@@ -1,10 +1,10 @@
 from pyfiglet import Figlet
 import sys
-Input = input("Enter the string :")
 if len(sys.argv) == 0:
-
+    Input = input("Enter the string :")
+    
 elif len(sys.argv) == 2:
-
+    Input = input("Enter the string :")
 else:
     sys.exit("Argument few or many")
 
