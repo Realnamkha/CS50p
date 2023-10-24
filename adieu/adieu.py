@@ -13,6 +13,6 @@ if len(user) == 1:
 elif len(user) == 2:
         print(f"Adieu, adieu, to {user[0]} and {user[1]}")
 else:
-    farewell = f"Adieu, {', '.join(names[:-1])}, and {names[-1]}!"
-    farewell = farewell.replace(", ", ", " * (len(names) - 2))
+    farewell = f"Adieu, {', '.join(user[:-1])}, and {user[-1]}!"
+    farewell = farewell.replace(", ", ", " * (len(user) - 2))
     print(farewell)
