@@ -1,15 +1,17 @@
 from pyfiglet import Figlet
+import random
 import sys
+figlet = Figlet()
+fonts = figlet.getFonts()
+
 if len(sys.argv) == 0:
     Input = input("Enter the string :")
-    
+    figlet.setFont(font=random.choice[fonts])
+
 elif len(sys.argv) == 2:
     Input = input("Enter the string :")
+    figlet.setFont(font=argv[2])
 else:
     sys.exit("Argument few or many")
 
-print("hello, my name is", sys.argv[1])
-figlet = Figlet()
-print(figlet.getFonts())
-figlet.setFont(font=f)
-print(figlet.renderText(s))
+print(figlet.renderText(Input))
