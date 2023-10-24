@@ -1,4 +1,9 @@
 import inflect
 p = inflect.engine()
 while True:
-    user = input("NAME : ")
+    try:
+        user = input("NAME : ")
+
+    except EOFError:
+            break
+print(f"Adieu, adieu, to {user}")
