@@ -6,7 +6,7 @@ fonts = figlet.getFonts()
 
 if len(sys.argv) == 1:
     Input = input("Enter the string :")
-    figlet.setFont(font=random.choice[fonts])
+    figlet.setFont(font = font_list[random.randint(0, 424)])
 
 elif len(sys.argv) == 3:
     Input = input("Enter the string :")
