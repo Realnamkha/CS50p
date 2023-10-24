@@ -6,4 +6,4 @@ while True:
 
     except EOFError:
             break
-print(f"\nAdieu, adieu, to {user[0]}")
+print(f"\nAdieu, adieu, to {user[0] ,user[1], user[2]}")
