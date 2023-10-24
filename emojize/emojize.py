@@ -1,3 +1,6 @@
 import emoji
 Input = input("Input: ")
-print(emoji.emojize(Input,language = 'en' or 'alias'))
+if '_' in Input:
+    print(emoji.emojize(Input))
+else:
+    print(emoji.emojize(Input,language='alias'))
