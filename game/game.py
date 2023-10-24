@@ -2,7 +2,11 @@ import random
 import sys
 level = -1
 while (level<0):
-    level = int(input("Level :"))
+    try:
+        level = int(input("Level :"))
+    except ValueError:
+        pass
+
 while True:
     try:
         number = random.randint(1, level)
