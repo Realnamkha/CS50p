@@ -6,10 +6,7 @@ fonts = figlet.getFonts()
 
 if len(sys.argv) == 1:
     Input = input("Enter the string :")
-    if (sys.argv[1] == '-f' or '--font'):
-        figlet.setFont(font = fonts[random.randint(0, 424)])
-    else:
-        sys.exit("Invalid Argument")
+    figlet.setFont(font = fonts[random.randint(0, 424)])
 elif len(sys.argv) == 3:
     Input = input("Enter the string :")
     if ((sys.argv[1] == '-f' or '--font') and (argv[2] in fonts)):
