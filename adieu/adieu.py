@@ -2,8 +2,8 @@ import inflect
 p = inflect.engine()
 while True:
     try:
-        user = input("NAME : ")
+        user = input("NAME : ").split("\n")
 
     except EOFError:
             break
-print(f"\nAdieu, adieu, to {user}")
+print(f"\nAdieu, adieu, to {user[0]}")
