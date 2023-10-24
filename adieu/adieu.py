@@ -1,8 +1,9 @@
 import inflect
 p = inflect.engine()
+user = []
 while True:
     try:
-        user = input("NAME : ").split("\n")
+        user += input("NAME : ").split("\n")
 
     except EOFError:
             break
