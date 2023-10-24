@@ -4,13 +4,13 @@ import sys
 figlet = Figlet()
 fonts = figlet.getFonts()
 
-if len(sys.argv) == 0:
+if len(sys.argv) == 1:
     Input = input("Enter the string :")
     figlet.setFont(font=random.choice[fonts])
 
-elif len(sys.argv) == 2:
+elif len(sys.argv) == 3:
     Input = input("Enter the string :")
-    figlet.setFont(font=argv[2])
+    figlet.setFont(font=sys.argv[2])
 else:
     sys.exit("Argument few or many")
 
