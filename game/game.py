@@ -1,11 +1,11 @@
 import random
 import sys
+level = -1
+while (level<0):
+    level = int(input("Level :"))
 while True:
     try:
-        Level = int(input("Enter a positive number"))
-        if(Level<0):
-            continue
-        number = random.randint(1, Level)
+        number = random.randint(1, level)
         Guess = int(input("Guess: "))
         if(Guess<0):
             continue
