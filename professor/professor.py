@@ -37,7 +37,7 @@ def generate_integer(level):
                 break
             elif (x+y != z):
                 print("EEE")
-                chance -= 1
+                chance = chance - 1
                 if (chance == 0):
                     print(f"{x} + {y} = {x+y} ",end=" ")
                     break
