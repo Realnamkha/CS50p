@@ -42,6 +42,7 @@ def generate_integer(level):
             else:
                 print("EEE")
                 print(f"{x} + {y} = {x+y}")
+                chance = 1
                 break
 
 print("Score : {score}")
