@@ -2,8 +2,8 @@ import random
 
 
 def main():
-    ...
-
+    level=get_level()
+    generate_integer(level)
 
 def get_level():
     while True:
@@ -13,6 +13,7 @@ def get_level():
                 break
         except ValueError:
             pass
+    return level
 
 
 def generate_integer(level):
@@ -29,7 +30,7 @@ def generate_integer(level):
             y = random.randint(9,999)
         while True:
             chance = 3
-            print(f"{x} + {y} = ",sep=" ")
+            print(f"{x} + {y} = ",end=" ")
             z = int(input())
             if (x+y == z):
                 score += 1
@@ -37,8 +38,9 @@ def generate_integer(level):
             elif (x+y != z):
                 print("EEE")
                 chance -= 1
-                if (chance == 3):
-                    print(f"{x} + {y} = {x+y} ",sep=" ")
+                if (chance == 0):
+                    print(f"{x} + {y} = {x+y} ",end=" ")
+                    break
 
 if __name__ == "__main__":
     main()
