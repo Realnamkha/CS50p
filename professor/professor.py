@@ -17,6 +17,7 @@ def get_level():
 
 
 def generate_integer(level):
+    chance = 3
     score = 0
     for _ in range(10):
         if (level == 1):
@@ -29,7 +30,6 @@ def generate_integer(level):
             x = random.randint(9,999)
             y = random.randint(9,999)
         while True:
-            chance = 3
             print(f"{x} + {y} = ",end=" ")
             z = int(input())
             if (x+y == z):
