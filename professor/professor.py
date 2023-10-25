@@ -45,6 +45,6 @@ def generate_integer(level):
                 chance = 1
                 break
 
-print("Score : {score}")
+    print("Score : {score}")
 if __name__ == "__main__":
     main()
