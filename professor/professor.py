@@ -28,13 +28,16 @@ def generate_integer(level):
             x = random.randint(9,999)
             y = random.randint(9,999)
         while True:
+            chance = 3
             print(f"{x} + {y} = ",sep=" ")
             z = int(input())
             if (x+y == z):
                 score += 1
                 break
             elif (x+y != z):
-                
+                chance -= 1
+                if (chance == 3):
+                    
 
 if __name__ == "__main__":
     main()
