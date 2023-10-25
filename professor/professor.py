@@ -6,10 +6,11 @@ def main():
 
 
 def get_level():
-    level = -1
-    while (level<0):
+    while True:
         try:
             level = int(input("Level :"))
+            if ((level = 1) or (level = 2) or (level = 3)):
+                break
         except ValueError:
             pass
 
