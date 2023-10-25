@@ -29,7 +29,7 @@ def generate_integer(level):
         else:
             x = random.randint(9,999)
             y = random.randint(9,999)
-        while True:
+        while (True):
             print(f"{x} + {y} = ",end=" ")
             z = input()
             if (str(x+y) == z):
