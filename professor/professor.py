@@ -31,13 +31,13 @@ def generate_integer(level):
             y = random.randint(9,999)
         while True:
             print(f"{x} + {y} = ",end=" ")
-            z = int(input())
-            if (x+y == z):
+            z = input()
+            if (str(x+y) == z):
                 score += 1
                 break
-            elif ((x+y != z) and (chance !=3)):
+            elif ((str(x+y) != z) and (chance !=3)):
                 print("EEE")
-                chance = chance - 1
+                chance = chance + 1
                 print(chance)
             else:
                 print(f"{x} + {y} = {x+y}")
