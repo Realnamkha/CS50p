@@ -16,12 +16,17 @@ def get_level():
 
 
 def generate_integer(level):
-    if (level == 1):
-        return random.randint(0,9)
-    elif (level == 2):
-        return random.randint(10,99)
-    else:
-        return random.randint(99,999)
+    score = 0
+    for _ in range(10):
+        if (level == 1):
+            x = random.randint(0,9)
+            y = random.randint(0,9)
+        elif (level == 2):
+            x = random.randint(10,99)
+            y = random.randint(10,99)
+        else:
+            x = random.randint(9,999)
+            y = random.randint(9,999)
     # X = random.randint(0,9)
     # Y = random.randint(0,9)
     # print(f"{X} + {Y} = ")
