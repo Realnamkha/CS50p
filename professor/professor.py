@@ -37,7 +37,7 @@ def generate_integer(level):
             elif (x+y != z):
                 chance -= 1
                 if (chance == 3):
-                    
+                    print(f"{x} + {y} = {x+y} ",sep=" ")
 
 if __name__ == "__main__":
     main()
