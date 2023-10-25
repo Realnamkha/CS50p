@@ -16,14 +16,20 @@ def get_level():
 
 
 def generate_integer(level):
-    X = random.randint(0,9)
-    Y = random.randint(0,9)
-    print(f"{X} + {Y} = ")
-    Z = int(input())
-    if (X+Y == Z):
-        score += 1
+    if (level == 1):
+        return random.randint(0,9)
+    elif (level == 2):
+        return random.randint(10,99)
     else:
-        continue
+        return random.randint(99,999)
+    # X = random.randint(0,9)
+    # Y = random.randint(0,9)
+    # print(f"{X} + {Y} = ")
+    # Z = int(input())
+    # if (X+Y == Z):
+    #     score += 1
+    # else:
+    #     continue
 
 if __name__ == "__main__":
     main()
