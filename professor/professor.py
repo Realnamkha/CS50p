@@ -44,6 +44,6 @@ def generate_integer(level):
                 print(f"{x} + {y} = {x+y}")
                 break
 
-
+print("Score : {score}")
 if __name__ == "__main__":
     main()
