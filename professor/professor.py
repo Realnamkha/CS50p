@@ -27,14 +27,14 @@ def generate_integer(level):
         else:
             x = random.randint(9,999)
             y = random.randint(9,999)
-    # X = random.randint(0,9)
-    # Y = random.randint(0,9)
-    # print(f"{X} + {Y} = ")
-    # Z = int(input())
-    # if (X+Y == Z):
-    #     score += 1
-    # else:
-    #     continue
+        while True:
+            print(f"{x} + {y} = ",sep=" ")
+            z = int(input())
+            if (x+y == z):
+                score += 1
+                break
+            elif (x+y != z):
+                
 
 if __name__ == "__main__":
     main()
