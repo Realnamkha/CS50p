@@ -35,12 +35,14 @@ def generate_integer(level):
             if (x+y == z):
                 score += 1
                 break
-            elif (x+y != z):
+            elif ((x+y != z) and (chance !=0)):
                 print("EEE")
                 chance = chance - 1
-                if (chance == 0):
-                    print(f"{x} + {y} = {x+y} ",end=" ")
-                    break
+                print(chance)
+            else:
+                print(f"{x} + {y} = {x+y}")
+                break
+
 
 if __name__ == "__main__":
     main()
