@@ -19,7 +19,11 @@ def generate_integer(level):
     X = random.randint(0,9)
     Y = random.randint(0,9)
     print(f"{X} + {Y} = ")
-
+    Z = int(input())
+    if (X+Y == Z):
+        score += 1
+    else:
+        continue
 
 if __name__ == "__main__":
     main()
