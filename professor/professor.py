@@ -17,7 +17,7 @@ def get_level():
 
 
 def generate_integer(level):
-    chance = 0
+    chance = 1
     score = 0
     for _ in range(10):
         if (level == 1):
@@ -40,6 +40,7 @@ def generate_integer(level):
                 chance = chance + 1
                 print(chance)
             else:
+                print("EEE")
                 print(f"{x} + {y} = {x+y}")
                 break
 
