@@ -17,7 +17,7 @@ def get_level():
 
 
 def generate_integer(level):
-    chance = 3
+    chance = 0
     score = 0
     for _ in range(10):
         if (level == 1):
@@ -35,7 +35,7 @@ def generate_integer(level):
             if (x+y == z):
                 score += 1
                 break
-            elif ((x+y != z) and (chance !=0)):
+            elif ((x+y != z) and (chance !=3)):
                 print("EEE")
                 chance = chance - 1
                 print(chance)
