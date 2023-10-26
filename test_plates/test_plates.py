@@ -19,6 +19,7 @@ def test_numbers():
     assert is_valid("11AA") == False
     assert is_valid("A11AA") == False
     assert is_valid("AA123") == True
+    assert is_valid("AAA11A") == False
 
 
 def test_zero():
