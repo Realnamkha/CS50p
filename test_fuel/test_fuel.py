@@ -1,4 +1,3 @@
-from fuel import get_fuel, convert, gauge
+from fuel import convert, gauge
 
 def test_input():
-    
