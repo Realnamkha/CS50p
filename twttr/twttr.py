@@ -1,14 +1,14 @@
 def main():
     string = input("Enter the string ").strip()
-    shorten(string)
+    print(shorten(string))
 
 def shorten(word):
     vowels = ['a','e','i','o','u','A','E','I','O','U']
-    word = ""
+    new_word = ""
     for char in word:
         if char not in vowels:
-            word +=char
-    print(word)
+            new_word +=char
+    return new_word
 
 
 if __name__ == "__main__":
