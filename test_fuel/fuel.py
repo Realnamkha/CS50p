@@ -28,5 +28,17 @@ def get_fuel():
     fuel = fuel *100
     fuel = round(fuel,1)
     return fuel
+def main():
+    fuel = 
 
-main()
+
+def convert(fraction):
+    ...
+
+
+def gauge(percentage):
+    ...
+
+
+if __name__ == "__main__":
+    main()
