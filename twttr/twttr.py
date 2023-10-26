@@ -1,12 +1,12 @@
 def main():
     string = input("Enter the string ").strip()
-    shorten(string)
+    print(shorten(string))
 
 
 def shorten(word):
     vowels = ['a','e','i','o','u','A','E','I','O','U']
     word = ""
-    for char in string:
+    for char in word:
         if char not in vowels:
             word +=char
     return word
