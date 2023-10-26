@@ -1,5 +1,8 @@
 def main():
     fuel = get_fuel()
+    percent = convert(fuel)
+    gauge = 
+
     if (fuel<=1):
         print("E")
     elif(fuel>=99):
@@ -24,20 +27,22 @@ def get_fuel():
             print("Y cannot be zero")
         except Exception as e:
             print(e)
-
-    fuel = fuel *100
-    fuel = round(fuel,1)
     return fuel
-def main():
-    fuel = 
 
 
 def convert(fraction):
-    ...
+    fraction = fraction * 100
+    fraction = round(fuel,1)
+    return fraction
 
 
 def gauge(percentage):
-    ...
+    if (percentage<=1):
+        print("E")
+    elif(percentage>=99):
+        print("F")
+    else:
+        print(f"{percentage:.0f}%")
 
 
 if __name__ == "__main__":
