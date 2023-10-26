@@ -31,11 +31,11 @@ def convert(fraction):
 
 def gauge(percentage):
     if (percentage<=1):
-        print("E")
+        return "E"
     elif(percentage>=99):
-        print("F")
+        return "F"
     else:
-        print(f"{percentage:.0f}%")
+        return f"{percentage:.0f}%"
 
 
 if __name__ == "__main__":
