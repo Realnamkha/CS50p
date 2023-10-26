@@ -22,6 +22,7 @@ def convert(fraction):
             print(e)
     fraction = fraction * 100
     fraction = round(fraction,1)
+    fraction = int(fraction)
     return fraction
 
 
