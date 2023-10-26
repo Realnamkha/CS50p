@@ -1,19 +1,34 @@
 from plates import is_valid
 
-def test_start():
-    is_valid("A") == False
-    is_valid("11") == False
-    is_valid("A1") == False
-    is_valid("0A") == False
+def test_check_start():
+    assert is_valid("CS50") == True
+    assert is_valid("50") == False
+    assert is_valid("a") == False
+    assert is_valid("1") == False
+    assert is_valid("CS") == True
 
-def test_len():
-    is_valid("A") == False
-    is_valid("AA") == True
-    is_valid("CCCCCC") == False
-    is_valid("AAAAAAAAA") == False
 
-def test_alnumber():
-    is_valid("CS50") == True
-    is_valid("CS05") == False
-    is_valid("AAA1111") == False
+def test_length():
+    assert is_valid("AA") == True
+    assert is_valid("A") == False
+    assert is_valid("AAAAAAA") == False
+    assert is_valid("AAAAAA") == True
 
+
+def test_numbers():
+    assert is_valid("12345") == False
+    assert is_valid("11AA") == False
+    assert is_valid("AA11") == True
+    assert is_valid("AA11A1") == False
+    assert is_valid("AAA11A") == False
+
+
+def test_zero():
+    assert is_valid("00") == False
+    assert is_valid("CS50") == True
+    assert is_valid("CS05") == False
+
+
+def test_symbols():
+    assert is_valid("CS50!") == False
+    assert is_valid("3.14") == False
