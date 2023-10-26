@@ -1,35 +1,16 @@
 def main():
-    fuel = get_fuel()
-    percent = convert(fuel)
+    fraction = input("Fractions: ")
+    percent = convert(fraction)
     print(gauge(percent))
-
-def get_fuel():
-    while True:
-        try :
-            fuel = input("Fractions: ")
-            X,Y = fuel.split("/")
-            X = int(X)
-            Y = int(Y)
-            fuel = X/Y
-            if X>Y:
-                raise Exception("X is greater than Y")
-            break
-        except ValueError:
-            print("X or Y is not an integer")
-        except ZeroDivisionError:
-            print("Y cannot be zero")
-        except Exception as e:
-            print(e)
 
 
 def convert(fraction):
     while True:
         try :
-            fraction = input("Fractions: ")
-            X,Y = fuel.split("/")
+            X,Y = fraction.split("/")
             X = int(X)
             Y = int(Y)
-            fuel = X/Y
+            fraction= X/Y
             if X>Y:
                 raise Exception("X is greater than Y")
             break
