@@ -1,5 +1,11 @@
 from plates import is_valid
 
+def test_start():
+    is_valid("A") == False
+    is_valid("11") == False
+    is_valid("A1") == False
+    is_valid("0A") == False
+
 def test_len():
     is_valid("A") == False
     is_valid("AA") == True
@@ -11,8 +17,3 @@ def test_alnumber():
     is_valid("CS05") == False
     is_valid("AAA1111") == False
 
-def test_start():
-    is_valid("11") == False
-    is_valid("A") == False
-    is_valid("A1") == False
-    is_valid("0A") == False
