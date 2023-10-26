@@ -1,14 +1,7 @@
 def main():
     fuel = get_fuel()
     percent = convert(fuel)
-    gauge = 
-
-    if (fuel<=1):
-        print("E")
-    elif(fuel>=99):
-        print("F")
-    else:
-        print(f"{fuel:.0f}%")
+    print(gauge(percent))
 
 def get_fuel():
     while True:
@@ -32,7 +25,7 @@ def get_fuel():
 
 def convert(fraction):
     fraction = fraction * 100
-    fraction = round(fuel,1)
+    fraction = round(fraction,1)
     return fraction
 
 
