@@ -9,7 +9,7 @@ def test_case_insensitivity():
 
 
 def test_all():
-    assert value("Hello, Namkha") == 0
-    assert value("Greetings, Namkha") == 100
-    assert value("Hi, Namkha") == 20
+    assert value("Hello, Namkha") == "$0"
+    assert value("Greetings, Namkha") == "$100"
+    assert value("Hi, Namkha") == "$20"
 
