@@ -1,7 +1,7 @@
 def main():
     fraction = input("Fractions: ")
     percent = convert(fraction)
-    print(gauge(percent))
+    print(type(gauge(percent)))
 
 
 def convert(fraction):
