@@ -20,10 +20,25 @@ def get_fuel():
             print("Y cannot be zero")
         except Exception as e:
             print(e)
-    return fuel
 
 
 def convert(fraction):
+    while True:
+        try :
+            fraction = input("Fractions: ")
+            X,Y = fuel.split("/")
+            X = int(X)
+            Y = int(Y)
+            fuel = X/Y
+            if X>Y:
+                raise Exception("X is greater than Y")
+            break
+        except ValueError:
+            print("X or Y is not an integer")
+        except ZeroDivisionError:
+            print("Y cannot be zero")
+        except Exception as e:
+            print(e)
     fraction = fraction * 100
     fraction = round(fraction,1)
     return fraction
