@@ -15,11 +15,11 @@ def convert(fraction):
                 raise Exception("X is greater than Y")
             break
         except ValueError:
-            return "X or Y is not an integer"
+            return ("X or Y is not an integer")
         except ZeroDivisionError:
-            return "Y cannot be zero"
+            return ("Y cannot be zero")
         except Exception as e:
-            return e
+            return (e)
     fraction = fraction * 100
     fraction = round(fraction,1)
     fraction = int(fraction)
