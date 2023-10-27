@@ -6,11 +6,9 @@ def main():
             print(gauge(percent))
             break
         except ValueError:
-            print("X or Y is not an integer")
-            continue
+            return "X or Y is not an integer"
         except ZeroDivisionError:
-            print("Y cannot be zero")
-            continue
+            return "Y cannot be zero"
 def convert(fraction):
             X,Y = fraction.split("/")
             X = int(X)
