@@ -6,14 +6,22 @@ def main():
             print(gauge(percent))
             break
         except ValueError:
-            return "X or Y is not an integer"
+            print("X or Y is not an integer")
+            continue
         except ZeroDivisionError:
-            return "Y cannot be zero"
+            print("Y cannot be zero")
+            continue
+        except Exception as e:
+            print(e)
+            continue
+
 def convert(fraction):
             X,Y = fraction.split("/")
             X = int(X)
             Y = int(Y)
             fraction= X/Y
+            if X>Y:
+                raise Exception("X is greater than Y")
             fraction = fraction *100
             fraction = round(fraction,1)
             return fraction
