@@ -13,18 +13,18 @@ def convert(fraction):
             fraction= X/Y
             if X>Y:
                 raise Exception("X is greater than Y")
-            break
+            fraction = fraction *100
+            fraction = round(fraction,1)
+            return fraction
         except ValueError:
             print("X or Y is not an integer")
+            break
         except ZeroDivisionError:
             print("Y cannot be zero")
+            break
         except Exception as e:
             print(e)
-
-    fraction = fraction *100
-    fraction = round(fraction,1)
-    return fraction
-
+            break
 
 def gauge(percentage):
     if (percentage < 1):
