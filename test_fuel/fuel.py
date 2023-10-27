@@ -1,33 +1,27 @@
 def main():
-    fraction = input("Fractions: ")
-    percent = convert(fraction)
-    print(gauge(percent))
-
-
-def convert(fraction):
     while True:
-        try :
+        try:
+            fraction = input("Fractions: ")
+            percent = convert(fraction)
+            print(gauge(percent))
+            break
+        except ValueError:
+            print("X or Y is not an integer")
+            continue
+        except ZeroDivisionError:
+            print("Y cannot be zero")
+            continue
+def convert(fraction):
             X,Y = fraction.split("/")
             X = int(X)
             Y = int(Y)
             fraction= X/Y
-            if X>Y:
-                raise Exception("X is greater than Y")
             fraction = fraction *100
             fraction = round(fraction,1)
             return fraction
-        except ValueError:
-            print("X or Y is not an integer")
-            break
-        except ZeroDivisionError:
-            print("Y cannot be zero")
-            break
-        except Exception as e:
-            print(e)
-            break
 
 def gauge(percentage):
-    if (percentage < 1):
+    if (percentage <= 1):
         return "E"
     elif(percentage>=99):
         return "F"
