@@ -11,6 +11,10 @@ def test_zero_division():
 # def test_greater():
 #     with pytest.raises(e):
 #         convert("3/1")
+def test_convert():
+    assert convert("0/4") == 0
+    assert convert("1/2") == 50
+    assert convert("4/4") == 100
 
 def test_gauge():
     assert gauge(0) == "E"
