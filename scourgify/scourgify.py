@@ -21,8 +21,6 @@ def main():
              row["last"] = last
              students.append(row)
 
-    for student in students:
-            print(f"{student['first']} |{student['last']} | {student['house']}")
     with open("after.csv","w") as file:
            writer = csv.DictWriter(file, fieldnames=["first","last","house"])
            writer.writerow(fieldnames)
