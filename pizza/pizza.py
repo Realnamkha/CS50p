@@ -21,13 +21,10 @@ def main():
     try:
         with open(file_name) as file:
             reader = csv.reader(file)
-            headers = next(reader)
+            headers = list(next(reader))
             menu = []
             for row in reader:
-                menu.append({"Pizza": row[0],
-                            "Small": row[1],
-                            "Large":row[2]})
-
+                menu.append([row[0],row[1],row[2]])
         print(tabulate((menu),headers,tablefmt="grid"))
     except FileNotFoundError:
             sys.exit("File does not exist")
