@@ -1,11 +1,14 @@
 import sys
 from tabulate import tabulate
+menu = []
 try:
     if len(sys.argv) == 2:
         file_name = sys.argv[1]
         if (file_name[-4:] == ".csv"):
             with open(file_name) as file:
-                lines = file.readlines()
+                 reader = csv.DictReader(file)
+                for row in reader:
+                    menu.append({"name": row["name"], "home": row["home"]})
 
         else:
             sys.exit("Not a CSV file")
