@@ -15,4 +15,4 @@ def main():
     with open(file_name) as file:
          reader = csv.DictReader(file)
          for row in reader:
-             
+             students.append({"name": row["name"], "home": row["home"]})
