@@ -1,21 +1,25 @@
 import sys
 import csv
 
-def get_filename(arguments):
-    if len(arguments) != 3:
-        if len(arguments) < 3:
-            exit('Too few command-line arguments')
-        else:
-            exit('Too many command-line arguments')
-    return sys.argv[1]
+# def get_filename(arguments):
+#     if len(arguments) != 3:
+#         if len(arguments) < 3:
+#             sys.exit('Too few command-line arguments')
+#         else:
+#             sys.exit('Too many command-line arguments')
+#     else:
+#          return sys.argv[1]
 
 def main():
-    file_name = get_filename(sys.argv)
+    # file_name = get_filename(sys.argv)
     students = []
-    with open(file_name) as file:
+    with open("before.csv") as file:
          reader = csv.DictReader(file)
          for row in reader:
-             students.append({"name": row["name"], "home": row["home"]})
+             students.append({"name": row["name"], "house": row["house"]})
 
-    for student in sorted(students):
-            print(f"{student['name']} | {student['home']}")
+    for student in students:
+            print(f"{student['name']} | {student['house']}")
+
+if __name__ == '__main__':
+    main()
