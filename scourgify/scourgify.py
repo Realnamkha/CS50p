@@ -7,8 +7,7 @@ def get_filename(arguments):
             exit('Too few command-line arguments')
         else:
             exit('Too many command-line arguments')
-    else:
-        return sys.argv[1]
+    return sys.argv[1]
 
 def main():
     file_name = get_filename(sys.argv)
