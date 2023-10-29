@@ -13,7 +13,7 @@ try:
                                  "small": row["Small"],
                                  "large":row["Large"]})
 
-            print(tabulate(menu))
+            print(tabulate((menu),headers="menu[keys"))
         else:
             sys.exit("Not a CSV file")
     else:
