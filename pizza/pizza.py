@@ -13,11 +13,11 @@ try:
                                  "small": row["Small"],
                                  "large":row["Large"]})
 
-            for item in menu:
-                    print(f"{item['pizza']} | {item['small']} | {item['large']}")
+            print(tabulate(menu))
         else:
             sys.exit("Not a CSV file")
     else:
         sys.exit("More or few arguments")
 except FileNotFoundError:
     sys.exit("File does not exist")
+
