@@ -18,9 +18,11 @@ def main():
          for row in reader:
              students.append({"name": row["name"], "house": row["house"]})
              first , last = row["name"].split(',')
+             print(first)
+             print(last)
 
-    for student in students:
-            print(f"{student['first']} | {student['house']}")
+    # for student in students:
+    #         print(f"{student['first']} | {student['house']}")
     # with open("after.csv") as file:
     #        writer = csv.DictWriter(file, fieldnames=["first","last","house"])
     #        writer.writerow({"first": student['], "house": house})
