@@ -8,7 +8,7 @@ try:
             with open(file_name) as file:
                  reader = csv.DictReader(file)
                 for row in reader:
-                    menu.append({"pizza": row["Regular Pizza"], "home": row["home"]})
+                    menu.append({"pizza": row["Regular Pizza"], "small": row["Small"]},{"large":row["Large"]})
 
         else:
             sys.exit("Not a CSV file")
