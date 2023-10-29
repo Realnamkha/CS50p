@@ -20,8 +20,8 @@ def main():
             reader = csv.DictReader(file)
             for row in reader:
                 last , first = row["name"].split(',')
-                first_names.append(first)
-                last_names.append(last)
+                first_names.append(first.strip())
+                last_names.append(last.strip())
                 houses.append(row["house"])
     except FileNotFoundError:
         exit('File does not exist')
