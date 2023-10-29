@@ -13,13 +13,17 @@ def get_filename(arguments):
 def main():
     read_file,write_file = get_filename(sys.argv)
     students = []
-    with open(read_file) as file:
-         reader = csv.DictReader(file)
-         for row in reader:
-             last , first = row["name"].split(',')
-             row["first"] = first
-             row["last"] = last
-             students.append(row)
+    try:
+        with open(read_file) as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                last , first = row["name"].split(',')
+                row["first"] = first
+                row["last"] = last
+                students.append(row)
+    except FileNotFoundError:
+        exit('File does not exist')
+
 
     with open(write_file,"w") as file:
            writer = csv.DictWriter(file, fieldnames=["first","last","house"])
