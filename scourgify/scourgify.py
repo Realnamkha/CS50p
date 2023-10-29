@@ -16,13 +16,13 @@ def main():
     with open("before.csv") as file:
          reader = csv.DictReader(file)
          for row in reader:
-             students.append({"name": row["name"], "house": row["house"]})
-             first , last = row["name"].split(',')
-             print(first)
-             print(last)
+             last , first = row["name"].split(',')
+             row["first"] = first
+             row["last"] = last
+             students.append(row)
 
-    # for student in students:
-    #         print(f"{student['first']} | {student['house']}")
+    for student in students:
+            print(f"{student['first']} |{student['last']} | {student['house']}")
     # with open("after.csv") as file:
     #        writer = csv.DictWriter(file, fieldnames=["first","last","house"])
     #        writer.writerow({"first": student['], "house": house})
