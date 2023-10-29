@@ -21,7 +21,7 @@ def main():
     check_csv(file_name)
     try:
         with open(file_name) as file:
-            reader = csv.DictReader(file)
+            reader = csv.reader(file)
             for row in reader:
                 menu.append({"Regular Pizza": row["Regular Pizza"],
                             "Small": row["Small"],
