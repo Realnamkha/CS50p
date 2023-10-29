@@ -17,11 +17,12 @@ def main():
          reader = csv.DictReader(file)
          for row in reader:
              students.append({"name": row["name"], "house": row["house"]})
+             first , last = row["name"].split(',')
 
     for student in students:
-            print(f"{student['name']} | {student['house']}")
-    with open("after.csv") as file:
-           writer = csv.DictWriter(file, fieldnames=["first","last","house"])
-           writer.writerow({"first": student['], "house": house})
+            print(f"{student['first']} | {student['house']}")
+    # with open("after.csv") as file:
+    #        writer = csv.DictWriter(file, fieldnames=["first","last","house"])
+    #        writer.writerow({"first": student['], "house": house})
 if __name__ == '__main__':
     main()
