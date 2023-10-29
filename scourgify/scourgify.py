@@ -12,7 +12,9 @@ def get_filename(arguments):
 
 def main():
     read_file,write_file = get_filename(sys.argv)
-    students = []
+    first_names=[]
+    last_names=[]
+    houses=[]
     try:
         with open(read_file) as file:
             reader = csv.DictReader(file)
@@ -20,7 +22,7 @@ def main():
                 last , first = row["name"].split(',')
                 row["first"] = first
                 row["last"] = last
-                students.append(row)
+                first_names.append()
     except FileNotFoundError:
         exit('File does not exist')
 
