@@ -14,3 +14,5 @@ def main():
     file_name = get_filename(sys.argv)
     with open(file_name) as file:
          reader = csv.DictReader(file)
+         for row in reader:
+             
