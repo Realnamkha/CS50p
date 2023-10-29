@@ -22,7 +22,6 @@ def main():
             print(f"{student['name']} | {student['house']}")
     with open("after.csv") as file:
            writer = csv.DictWriter(file, fieldnames=["first","last","house"])
-           o
            writer.writerow({"first": student['], "house": house})
 if __name__ == '__main__':
     main()
