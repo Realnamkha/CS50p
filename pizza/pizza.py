@@ -9,7 +9,15 @@ def get_filename(arguments):
         else:
             exit('Too mant command-line arguments')
     else:
-    return argv[1]
+        return argv[1]
+
+
+def check_csv(file_name):
+     if (file_name[-4:] != ".csv"):
+         sys.exit("Not a csv file")
+def main():
+    filename = get_filename(argv)
+    check_csv(filename)
 try:
     if len(sys.argv) == 2:
         file_name = sys.argv[1]
