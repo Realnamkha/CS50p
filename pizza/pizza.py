@@ -9,11 +9,11 @@ try:
             with open(file_name) as file:
                  reader = csv.DictReader(file)
                  for row in reader:
-                    menu.append({"pizza": row["Regular Pizza"],
-                                 "small": row["Small"],
-                                 "large":row["Large"]})
+                    menu.append({"Regular Pizza": row["Regular Pizza"],
+                                 "Small": row["Small"],
+                                 "Large":row["Large"]})
 
-            print(tabulate((menu),headers="keys"))
+            print(tabulate((menu),headers="keys",tablefmt="grid"))
         else:
             sys.exit("Not a CSV file")
     else:
