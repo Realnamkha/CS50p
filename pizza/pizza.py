@@ -1,7 +1,6 @@
 import sys
 import csv
 from tabulate import tabulate
-menu = []
 def get_filename(arguments):
     if len(arguments) != 2:
         if len(arguments) < 2:
@@ -22,12 +21,14 @@ def main():
     try:
         with open(file_name) as file:
             reader = csv.reader(file)
+            menu = []
+            headers = list(next(reader))
             for row in reader:
                 menu.append({"Regular Pizza": row[0],
                             "Small": row[1],
                             "Large":row[2]})
 
-        print(tabulate((menu),tablefmt="grid"))
+        print(tabulate((menu),headers,tablefmt="grid"))
     except FileNotFoundError:
             sys.exit("File does not exist")
 
