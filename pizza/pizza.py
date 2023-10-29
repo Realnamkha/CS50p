@@ -23,11 +23,11 @@ def main():
         with open(file_name) as file:
             reader = csv.reader(file)
             for row in reader:
-                menu.append({"Regular Pizza": row["Regular Pizza"],
-                            "Small": row["Small"],
-                            "Large":row["Large"]})
+                menu.append({"Regular Pizza": row[0],
+                            "Small": row[1],
+                            "Large":row[2]})
 
-        print(tabulate((menu),headers="keys",tablefmt="grid"))
+        print(tabulate((menu),tablefmt="grid"))
     except FileNotFoundError:
             sys.exit("File does not exist")
 
