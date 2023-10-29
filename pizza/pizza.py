@@ -2,6 +2,14 @@ import sys
 import csv
 from tabulate import tabulate
 menu = []
+def get_filename(arguments):
+    if len(arguments) != 2:
+        if len(arguments) < 2:
+            exit('Too few command-line arguments')
+        else:
+            exit('Too mant command-line arguments')
+    else:
+    return argv[1]
 try:
     if len(sys.argv) == 2:
         file_name = sys.argv[1]
