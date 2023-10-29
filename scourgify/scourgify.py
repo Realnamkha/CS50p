@@ -22,7 +22,7 @@ def main():
                 last , first = row["name"].split(',')
                 first_names.append(first)
                 last_names.append(last)
-                houses.append(row["houses"])
+                houses.append(row["house"])
     except FileNotFoundError:
         exit('File does not exist')
 
@@ -31,7 +31,7 @@ def main():
            writer = csv.DictWriter(file, fieldnames=["first","last","house"])
            writer.writeheader()
            for student in range(len(houses)):
-                    writer.writerow({"first": student['first'],"last": student['last'],"house": student['house']})
+                    writer.writerow({"first": first_names[student],"last": last_names[student],"house": houses[student]})
 
 if __name__ == '__main__':
     main()
