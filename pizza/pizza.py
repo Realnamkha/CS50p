@@ -9,7 +9,9 @@ try:
             with open(file_name) as file:
                  reader = csv.DictReader(file)
                  for row in reader:
-                    menu.append({"pizza": row["Regular Pizza"], "small": row["Small"]},{"large":row["Large"]})
+                    menu.append({"pizza": row["Regular Pizza"],
+                                 "small": row["Small"],
+                                 "large":row["Large"]})
 
             for item in menu:
                     print(f"{item['pizza']} | {item['small']} | {item['large']}")
