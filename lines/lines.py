@@ -1,5 +1,22 @@
-with open("names.txt", "r") as file:
-    lines = file.readlines()
+import sys
+count = 0
+try:
+    if len(sys.argv) == 2:
+        file_name = sys.argv[1]
+        if (file_name[-3:] == ".py"):
+            with open(file_name) as file:
+                lines = file.readlines()
+                for line in lines:
+                    if ((line.strip().startswith("#")) or  (line.strip() == "")):
+                        pass
+                    else:
+                        count +=1
+                print(count)
 
-for line in lines:
-    print("hello,", line.rstrip())
+        else:
+            sys.exit("Not a Python file")
+    else:
+        sys.exit("More or few arguments")
+except FileNotFoundError:
+    sys.exit("File does not exist")
+
