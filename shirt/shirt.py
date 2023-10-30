@@ -19,4 +19,4 @@ def check_csv(file_name):
          sys.exit("File name not correct extension")
 
 def check_extension(file_name):
-    
+    index = file_name.find(".")
