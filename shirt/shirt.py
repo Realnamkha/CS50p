@@ -1,5 +1,6 @@
 import sys
 import csv
+from PIL import Image
 
 def get_filename(arguments):
     if len(arguments) != 3:
@@ -27,17 +28,13 @@ def check_extension(input_name,output_name):
 
 
 def main():
-    input_name,output_name = get_filename(sys.argv)
-    check_extension(input_name)
-    check_extension(output_name)
+    # input_name,output_name = get_filename(sys.argv)
+    # check_extension(input_name)
+    # check_extension(output_name)
     try:
-        with open(input_name) as file:
-            reader = csv.reader(file)
-            headers = list(next(reader))
-            menu = []
-            for row in reader:
-                menu.append([row[0],row[1],row[2]])
-        print(tabulate((menu),headers,tablefmt="grid"))
+        with open("shirt.png") as fp:
+            Image.open(fp, mode='r')
+            
     except FileNotFoundError:
             sys.exit("File does not exist")
 
