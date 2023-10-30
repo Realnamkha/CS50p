@@ -35,7 +35,7 @@ def main():
         with open("shirt.png",'rb') as fp:
             image = Image.open(fp)
             ImageOps.fit(image, size=(100,100), method=0, bleed=0.0, centering=(0.5, 0.5))
-            Image.paste(im, box=None, mask=None)
+            Image.paste('before1.jpg', box=None, mask=None)
     except FileNotFoundError:
             sys.exit("File does not exist")
 
