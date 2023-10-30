@@ -1,5 +1,6 @@
 import sys
 import csv
+import os
 from PIL import Image,ImageOps
 
 def get_filename(arguments):
@@ -19,7 +20,7 @@ def check_extension(file_name):
      else:
          sys.exit("File name not correct extension")
 
-def check_extension(input_name,output_name):
+def check_equal(input_name,output_name):
     index1 = input_name.find(".")
     index2 = output_name.find(".")
 
@@ -28,19 +29,20 @@ def check_extension(input_name,output_name):
 
 
 def main():
-    # input_name,output_name = get_filename(sys.argv)
-    # check_extension(input_name)
-    # check_extension(output_name)
+    input_name,output_name = get_filename(sys.argv)
+    check_extension(input_name)
+    check_extension(output_name)
+    check_equal(input_name,output_name)
     try:
-        muppet = Image.open("before1.jpg")
+        muppet = Image.open(input_name)
         shirt = Image.open("shirt.png")
-
-        size = muppet.size
-        shirt = ImageOps.fit(shirt, size, method=0, bleed=0.0, centering=(0.5, 0.5))
-        shirt.paste(shirt, shirt)
-        shirt.save("after.jpg")
     except FileNotFoundError:
         exit('Input does not exist')
+
+    size = shirt.size
+    muppet = ImageOps.fit(muppet, size)
+    muppet.paste(shirt, shirt)
+    muppet.save(output_name)
 if __name__ == '__main__':
     main()
 
