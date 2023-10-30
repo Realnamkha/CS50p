@@ -9,3 +9,8 @@ def get_filename(arguments):
             sys.exit('Too many command-line arguments')
     else:
          return [sys.argv[1],sys.argv[2]]
+
+
+def check_csv(file_name):
+     if (file_name[-4:] != ".csv"):
+         sys.exit("Not a csv file")
