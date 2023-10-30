@@ -11,12 +11,36 @@ def get_filename(arguments):
          return [sys.argv[1],sys.argv[2]]
 
 
-def check_csv(file_name):
+def check_extension(file_name):
      file_name = file_name.lower()
      if (file_name.endswith(".jpg") or file_name.endswith(".jpeg") or file_name.endswith(".png")):
          pass
      else:
          sys.exit("File name not correct extension")
 
-def check_extension(file_name):
-    index = file_name.find(".")
+def check_extension(input_name,output_name):
+    index1 = input_name.find(".")
+    index2 = output_name.find(".")
+
+    if (input_name[index1:] != output_name[index2:]):
+        sys.exit("Input and Output extensions are not equal")
+
+
+def main():
+    file_name = get_filename(sys.argv)
+    check_extension(file_name)
+    try:
+        with open(file_name) as file:
+            reader = csv.reader(file)
+            headers = list(next(reader))
+            menu = []
+            for row in reader:
+                menu.append([row[0],row[1],row[2]])
+        print(tabulate((menu),headers,tablefmt="grid"))
+    except FileNotFoundError:
+            sys.exit("File does not exist")
+
+if __name__ == '__main__':
+    main()
+
+
