@@ -34,7 +34,7 @@ def main():
     try:
         with open("shirt.png",'rb') as fp:
             image = Image.open(fp)
-            ImageOps.fit(image, size, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
+            ImageOps.fit(image, size=1000, method=Resampling.BICUBIC, bleed=0.01, centering=(0.5, 0.5))
     except FileNotFoundError:
             sys.exit("File does not exist")
 
