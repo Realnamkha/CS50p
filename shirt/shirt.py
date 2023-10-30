@@ -1,6 +1,6 @@
 import sys
 import csv
-from PIL import Image
+from PIL import Image,ImageOps
 
 def get_filename(arguments):
     if len(arguments) != 3:
@@ -34,7 +34,7 @@ def main():
     try:
         with open("shirt.png",'rb') as fp:
             image = Image.open(fp)
-            ImageOps.fit(image, size=1000, method=Resampling.BICUBIC, bleed=0.01, centering=(0.5, 0.5))
+            ImageOps.fit(image, size=(100,100), method=0, bleed=0.0, centering=(0.5, 0.5))
     except FileNotFoundError:
             sys.exit("File does not exist")
 
