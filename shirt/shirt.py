@@ -33,7 +33,8 @@ def main():
     # check_extension(output_name)
     try:
         with open("shirt.png",'rb') as fp:
-            Image.open(fp)
+            image = Image.open(fp)
+            ImageOps.fit(image, size, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
     except FileNotFoundError:
             sys.exit("File does not exist")
 
