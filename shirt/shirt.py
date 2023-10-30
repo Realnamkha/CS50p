@@ -32,13 +32,15 @@ def main():
     # check_extension(input_name)
     # check_extension(output_name)
     try:
-        with open("before1.png",'rb') as fp:
-            image = Image.open(fp)
-            ImageOps.fit(image, size=(100,100), method=0, bleed=0.0, centering=(0.5, 0.5))
-            Image.paste('before1.jpg', box=None, mask=None)
-    except FileNotFoundError:
-            sys.exit("File does not exist")
+        muppet = Image.open("before1.jpg")
+        shirt = Image.open("shirt.png")
 
+        size = muppet.size
+        shirt = ImageOps.fit(shirt, size, method=0, bleed=0.0, centering=(0.5, 0.5))
+        shirt.paste(shirt, shirt)
+        shirt.save(outpt)
+    except FileNotFoundError:
+        exit('Input does not exist')
 if __name__ == '__main__':
     main()
 
