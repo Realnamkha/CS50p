@@ -32,8 +32,8 @@ def main():
     # check_extension(input_name)
     # check_extension(output_name)
     try:
-        with open("shirt.png") as fp:
-            Image.open(fp, mode='r', formats=None)
+        with open("shirt.png",'rb') as fp:
+            Image.open(fp)
     except FileNotFoundError:
             sys.exit("File does not exist")
 
