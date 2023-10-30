@@ -32,7 +32,7 @@ def main():
     # check_extension(input_name)
     # check_extension(output_name)
     try:
-        with open("shirt.png",'rb') as fp:
+        with open("before1.png",'rb') as fp:
             image = Image.open(fp)
             ImageOps.fit(image, size=(100,100), method=0, bleed=0.0, centering=(0.5, 0.5))
             Image.paste('before1.jpg', box=None, mask=None)
