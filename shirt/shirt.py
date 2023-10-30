@@ -12,5 +12,11 @@ def get_filename(arguments):
 
 
 def check_csv(file_name):
-     if (file_name[-4:] != ".csv"):
-         sys.exit("Not a csv file")
+     file_name = file_name.lower()
+     if (file_name.endswith(".jpg") or file_name.endswith(".jpeg") or file_name.endswith(".png")):
+         pass
+     else:
+         sys.exit("File name not correct extension")
+
+def check_extension(file_name):
+    
