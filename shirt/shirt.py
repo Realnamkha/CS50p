@@ -27,10 +27,11 @@ def check_extension(input_name,output_name):
 
 
 def main():
-    file_name = get_filename(sys.argv)
-    check_extension(file_name)
+    input_name,output_name = get_filename(sys.argv)
+    check_extension(input_name)
+    check_extension(output_name)
     try:
-        with open(file_name) as file:
+        with open(input_name) as file:
             reader = csv.reader(file)
             headers = list(next(reader))
             menu = []
