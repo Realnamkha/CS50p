@@ -38,7 +38,7 @@ def main():
         size = muppet.size
         shirt = ImageOps.fit(shirt, size, method=0, bleed=0.0, centering=(0.5, 0.5))
         shirt.paste(shirt, shirt)
-        shirt.save(outpt)
+        shirt.save("after.jpg")
     except FileNotFoundError:
         exit('Input does not exist')
 if __name__ == '__main__':
