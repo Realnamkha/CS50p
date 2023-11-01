@@ -7,7 +7,8 @@ def main():
 
 
 def parse(s):
-    
+    s = s.strip()
+    matches = re.search
 
 
 if __name__ == "__main__":
