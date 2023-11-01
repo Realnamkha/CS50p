@@ -8,8 +8,7 @@ def main():
 
 def parse(s):
     s = s.strip()
-    matches = re.search(r"^https?://(www\.)?youtube\.com/embed/([A-Za-z0-9]+)$", s, re.IGNORECASE)
-    if matches:
+    matches := re.search(r"^https?://(www\.)?youtube\.com/embed/([A-Za-z0-9]+)$", s, re.IGNORECASE):
         print(f"https://youtu.be/{matches.group(2)}")
 
 
