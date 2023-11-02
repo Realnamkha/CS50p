@@ -13,7 +13,7 @@ def parse(s):
     src_value = iframe_element.get('src')
     matches = re.search(r"^https?://(?:www\.)?youtube\.com/embed/([A-Za-z0-9]+)$", src_value, re.IGNORECASE)
     if matches:
-        print(f"https://youtu.be/{matches.group(1)}")
+        return f"https://youtu.be/{matches.group(1)}"
 
 
 if __name__ == "__main__":
