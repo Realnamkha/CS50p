@@ -8,7 +8,7 @@ def main():
 
 
 def parse(s):
-    soup = BeautifulSoup(s, 's.parser')
+    soup = BeautifulSoup(s, 'html.parser')
     iframe_element = soup.find('iframe')
     src_value = iframe_element.get('src')
     matches = re.search(r"^https?://(?:www\.)?youtube\.com/embed/([A-Za-z0-9]+)$", src_value, re.IGNORECASE)
