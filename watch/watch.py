@@ -14,6 +14,8 @@ def parse(s):
     matches = re.search(r"^https?://(?:www\.)?youtube\.com/embed/([A-Za-z0-9]+)$", src_value, re.IGNORECASE)
     if matches:
         return f"https://youtu.be/{matches.group(1)}"
+    else:
+        return False
 
 
 if __name__ == "__main__":
