@@ -1,5 +1,6 @@
 import re
 import sys
+from bs4 import BeautifulSoup
 
 
 def main():
@@ -7,8 +8,10 @@ def main():
 
 
 def parse(s):
-    s = s.strip()
-    matches = re.search(r"^https?://(?:www\.)?youtube\.com/embed/([A-Za-z0-9]+)$", s, re.IGNORECASE)
+    soup = BeautifulSoup(s, 's.parser')
+    iframe_element = soup.find('iframe')
+    src_value = iframe_element.get('src')
+    matches = re.search(r"^https?://(?:www\.)?youtube\.com/embed/([A-Za-z0-9]+)$", src_value, re.IGNORECASE)
     if matches:
         print(f"https://youtu.be/{matches.group(1)}")
 
