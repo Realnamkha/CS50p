@@ -13,7 +13,8 @@ def convert(s):
         time1 = matches.group(1)
         time2 = matches.group(3)
         if "AM" in time1:
-            
+            return time1[:-2].strip()
+        
     else:
         return ValueError
 
