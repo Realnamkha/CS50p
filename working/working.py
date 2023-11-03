@@ -28,7 +28,8 @@ def convert(s):
             return f"{time1} to {time2}"
 
     else:
-        return ValueError
+        raise ValueError:
+            return f"value Error"
 
 ...
 
