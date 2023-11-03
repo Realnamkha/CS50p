@@ -18,7 +18,7 @@ def convert(s):
             hours,minutes = time2.split(":")
             hours = int(hours) + 12
             minutes = int(minutes)
-            time2 = str(hours":"minutes)
+            time2 = f"{hours}:{minutes}"
             return time1,time2
 
     else:
