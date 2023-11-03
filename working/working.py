@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    matches = re.fullmatch(r"[0-9]|1[1-2] (AM)? to [0-9]|1[1-2] (PM)?")
+    matches = re.fullmatch(r"[0-9]|1[1-2]:[0-5][0-9] AM to [0-9]|1[1-2][0-5][0-9] PM")
 
 
 ...
