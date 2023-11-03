@@ -44,8 +44,8 @@ def convert(s):
                 if time1 == "12":
                     time1 == "00"
                 time2 = time2[:-2].strip()
-                time2 = int(time2) + 12
-                return f"{time1} to {time2}"
+                time2 = str(int(time2) + 12)
+                return f"{time1.zfill(2)}:00 to {time2.zfill(2)}:00"
     else:
          raise ValueError("Invalid time range format")
 
