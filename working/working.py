@@ -14,7 +14,8 @@ def convert(s):
         time2 = matches.group(3)
         if "AM" in time1:
             return time1[:-2].strip()
-        
+        else:
+            
     else:
         return ValueError
 
