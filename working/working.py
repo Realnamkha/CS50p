@@ -6,7 +6,7 @@ def main():
     try:
         print(convert(input("Hours: ")))
     except ValueError as e:
-    print(e)
+        print(e)
 
 
 def convert(s):
@@ -17,6 +17,9 @@ def convert(s):
         time2 = matches.group(3)
         if "AM" in time1 and "PM" in time2:
             time1 = time1[:-2].strip()
+            hours,minutes = time1.split(":")
+            if hours == '12':
+                hours = '00'
             time2 = time2[:-2].strip()
             hours,minutes = time2.split(":")
             hours = int(hours) + 12
@@ -24,6 +27,9 @@ def convert(s):
             return f"{time1} to {time2}"
         else:
             time2 = time2[:-2].strip()
+            hours,minutes = time2.split(":")
+            if hours == '12':
+                hours = '00'
             time1 = time1[:-2].strip()
             hours,minutes = time1.split(":")
             hours = int(hours) + 12
