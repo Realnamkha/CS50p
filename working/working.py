@@ -3,7 +3,10 @@ import sys
 
 
 def main():
-    print(convert(input("Hours: ")))
+    try:
+        print(convert(input("Hours: ")))
+    except ValueError as e:
+    print(e)
 
 
 def convert(s):
@@ -26,10 +29,8 @@ def convert(s):
             hours = int(hours) + 12
             time1 = f"{hours}:{minutes}"
             return f"{time1} to {time2}"
-
     else:
-        raise ValueError:
-            return f"value Error"
+         raise ValueError("Invalid time range format")
 
 ...
 
