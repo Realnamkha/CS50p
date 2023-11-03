@@ -21,22 +21,22 @@ def convert(s):
                 hours,minutes = time1.split(":")
                 if hours == '12':
                     hours = '00'
-                time1 = f"{hours:02d}:{minutes}"
+                time1 = f"{hours}:{minutes}"
                 time2 = time2[:-2].strip()
                 hours,minutes = time2.split(":")
                 hours = int(hours) + 12
-                time2 = f"{hours:02d}:{minutes}"
+                time2 = f"{hours}:{minutes}"
                 return f"{time1} to {time2}"
             else:
                 time2 = time2[:-2].strip()
                 hours,minutes = time2.split(":")
                 if hours == '12':
                     hours = '00'
-                time2 = f"{hours:02d}:{minutes}"
+                time2 = f"{hours}:{minutes}"
                 time1 = time1[:-2].strip()
                 hours,minutes = time1.split(":")
                 hours = int(hours) + 12
-                time1 = f"{hours:02d}:{minutes}"
+                time1 = f"{hours}:{minutes}"
                 return f"{time1} to {time2}"
         else:
             if "AM" in time1 and "PM" in time2:
