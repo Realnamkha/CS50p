@@ -14,7 +14,7 @@ def convert(s):
     matches = re.fullmatch(r"((0?[1-9]|1[0-2]):?([0-5][0-9]|([00])?) [AP][M]) to ((0?[1-9]|1[0-2]):?([0-5][0-9]|([00]?)) [AP][M])",s)
     if matches:
         time1 = matches.group(1)
-        time2 = matches.group(3)
+        time2 = matches.group(5)
         if "AM" in time1 and "PM" in time2:
             time1 = time1[:-2].strip()
             hours,minutes = time1.split(":")
