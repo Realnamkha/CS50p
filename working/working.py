@@ -12,13 +12,15 @@ def convert(s):
     if matches:
         time1 = matches.group(1)
         time2 = matches.group(3)
-        if "AM" in time1:
-            return time1[:-2].strip()
-        else:
+        if "AM" in time1 and "PM" in time2:
             time1 = time1[:-2].strip()
-            hours,minutes = time1.split(":")
+            time2 = time2[:-2].strip()
+            hours,minutes = time2.split(":")
             hours = int(hours) + 12
-            
+            minutes = int(minutes)
+            time2 = str(hours":"minutes)
+            return time1,time2
+
     else:
         return ValueError
 
