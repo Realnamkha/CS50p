@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    time1
+    matches = re.fullmatch(re")
 
 
 ...
