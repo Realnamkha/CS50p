@@ -19,6 +19,13 @@ def convert(s):
             hours = int(hours) + 12
             time2 = f"{hours}:{minutes}"
             return f"{time1} to {time2}"
+        else:
+            time2 = time2[:-2].strip()
+            time1 = time1[:-2].strip()
+            hours,minutes = time1.split(":")
+            hours = int(hours) + 12
+            time1 = f"{hours}:{minutes}"
+            return f"{time2} to {time1}"
 
     else:
         return ValueError
