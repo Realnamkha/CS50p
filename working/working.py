@@ -15,6 +15,9 @@ def convert(s):
         if "AM" in time1:
             return time1[:-2].strip()
         else:
+            time1 = time1[:-2].strip()
+            hours,minutes = time1.split(":")
+            hours = int(hours) + 12
             
     else:
         return ValueError
