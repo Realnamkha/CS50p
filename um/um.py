@@ -8,9 +8,12 @@ def main():
 
 def count(s):
     count = 0
-    if "um" in s:
-        count +=1
-    return count
+    x = re.search(r'\bum\b', s,re.IGNORECASE)
+
+    if x:
+        print("Match found:", x.group())
+    else:
+        print("No match found")
 
 
 if __name__ == "__main__":
