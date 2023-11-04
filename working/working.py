@@ -6,7 +6,7 @@ def main():
     try:
         print(convert(input("Hours: ")))
     except ValueError:
-        sys.exit()
+        sys.exit("ValueError")
 
 
 def convert(s):
