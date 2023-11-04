@@ -7,4 +7,4 @@ def test_extreme():
     assert("12:00 AM to 5:00 PM") != "12:00 to 17:00"
 
 def test_input():
-    assert("12:00AM to 5:00PM") ==
+    assert("12:00AM to 5:00PM") == raise ValueError
