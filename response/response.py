@@ -7,7 +7,7 @@ def main():
 
 
 def check_valid(email):
-    email_address = validators.email(email)
+    email_address = validators.email(email,allow_empty = True)
 
 if __name__ == "__main__":
     main()
