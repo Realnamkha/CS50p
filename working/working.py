@@ -24,7 +24,8 @@ def convert(s):
                 time1 = f"{hours.zfill(2)}:{minutes}"
                 time2 = time2[:-2].strip()
                 hours,minutes = time2.split(":")
-                hours = str(int(hours) + 12)
+                if hours != "12":
+                    hours = str(int(hours) + 12)
                 time2 = f"{hours.zfill(2)}:{minutes}"
                 return f"{time1} to {time2}"
             else:
@@ -35,7 +36,8 @@ def convert(s):
                 time2 = f"{hours.zfill(2)}:{minutes}"
                 time1 = time1[:-2].strip()
                 hours,minutes = time1.split(":")
-                hours = str(int(hours) + 12)
+                if hours != "12":
+                    hours = str(int(hours) + 12)
                 time1 = f"{hours.zfill(2)}:{minutes}"
                 return f"{time1} to {time2}"
         else:
@@ -44,14 +46,16 @@ def convert(s):
                 if time1 == "12":
                     time1 = "00"
                 time2 = time2[:-2].strip()
-                time2 = str(int(time2) + 12)
+                if time2 != "12":
+                    time2 = str(int(time2) + 12)
                 return f"{time1.zfill(2)}:00 to {time2.zfill(2)}:00"
             else:
                 time2 = time2[:-2].strip()
                 if time2 == "12":
                     time2 = "00"
                 time1 = time1[:-2].strip()
-                time1 = str(int(time1) + 12)
+                if time1 != "12":
+                    time1 = str(int(time1) + 12)
                 return f"{time1.zfill(2)}:00 to {time2.zfill(2)}:00"
     else:
          raise ValueError
