@@ -42,14 +42,14 @@ def convert(s):
             if "AM" in time1 and "PM" in time2:
                 time1 = time1[:-2].strip()
                 if time1 == "12":
-                    time1 == "00"
+                    time1 = "00"
                 time2 = time2[:-2].strip()
                 time2 = str(int(time2) + 12)
                 return f"{time1.zfill(2)}:00 to {time2.zfill(2)}:00"
             else:
                 time2 = time2[:-2].strip()
                 if time2 == "12":
-                    time2 == "00"
+                    time2 = "00"
                 time1 = time1[:-2].strip()
                 time1 = str(int(time1) + 12)
                 return f"{time1.zfill(2)}:00 to {time2.zfill(2)}:00"
