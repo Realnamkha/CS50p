@@ -19,8 +19,8 @@ def convert(s):
             if "AM" in time1 and "PM" in time2:
                 time1 = time1[:-2].strip()
                 hours,minutes = time1.split(":")
-                if hours == '12':
-                    hours = '00'
+                if hours == "12":
+                    hours = "00"
                 time1 = f"{hours.zfill(2)}:{minutes}"
                 time2 = time2[:-2].strip()
                 hours,minutes = time2.split(":")
@@ -30,8 +30,8 @@ def convert(s):
             else:
                 time2 = time2[:-2].strip()
                 hours,minutes = time2.split(":")
-                if hours == '12':
-                    hours = '00'
+                if hours == "12":
+                    hours = "00"
                 time2 = f"{hours.zfill(2)}:{minutes}"
                 time1 = time1[:-2].strip()
                 hours,minutes = time1.split(":")
