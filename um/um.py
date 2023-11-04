@@ -8,12 +8,11 @@ def main():
 
 def count(s):
     count = 0
-    x = re.search(r'\bum\b', s,re.IGNORECASE)
+    matches = re.finditer(r'\bum\b', s,re.IGNORECASE)
 
-    if x:
-        print("Match found:", x.group())
-    else:
-        print("No match found")
+    for _ in matches:
+        count +=1
+    return count
 
 
 if __name__ == "__main__":
