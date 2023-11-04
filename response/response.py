@@ -1,4 +1,4 @@
-
+from validator_collection import validators, checkers, errors
 import sys
 
 
@@ -7,7 +7,7 @@ def main():
 
 
 def check_valid(email):
-
+    email_address = validators.email(email)
 
 if __name__ == "__main__":
     main()
