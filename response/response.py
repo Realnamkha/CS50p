@@ -13,9 +13,9 @@ def check_valid(email_address):
         if is_email_address:
             return "Valid"
     except errors.EmptyValueError:
-        sys.exit("Invalid")
+        return "Invalid"
     except errors.InvalidEmailError:
-        sys.exit("Invalid")
+        return "Invalid"
 
 if __name__ == "__main__":
     main()
