@@ -54,7 +54,7 @@ def convert(s):
                 time1 = str(int(time1) + 12)
                 return f"{time1.zfill(2)}:00 to {time2.zfill(2)}:00"
     else:
-         raise ValueError("Invalid time range format")
+         raise ValueError("ValueError")
 
 ...
 
