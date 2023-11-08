@@ -4,7 +4,9 @@ class Date:
         self.year = year
         self.month = month
         self.day = day
-
+    @property
+    def Date(self):
+        return self._house
     def get_DOB():
         year,month,day = input("Enter Your DOB :").strip().split("-")
         year = int(year)
