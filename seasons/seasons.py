@@ -24,10 +24,9 @@ class Date:
 
 
 def main():
+    get_today()
     # year,month,day = get_DOB
     # date1 = Date(year,month,day)
-    get_today()
-
 
 if __name__ == "__main__":
     main()
