@@ -11,11 +11,10 @@ class Date:
         month = int(month)
         day = int(day)
         d = date(year, month, day)
-        print(d)
+        return d
 
     def get_today():
         today = date.today()
-        print(today)
 
     def __sub__(self, other):
         year = self.year + other.year
