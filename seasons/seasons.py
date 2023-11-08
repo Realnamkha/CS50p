@@ -21,7 +21,9 @@ class Date:
         month = self.month + other.month
         day = self.day + other.day
         return Vault(galleons, sickles, knuts)
-
+def get_today():
+    today = date.today()
+    print(today)
 
 def main():
     get_today()
