@@ -14,7 +14,7 @@ class Date:
 
     def get_today():
         today = date.today()
-        return today
+        print(today)
 
     def __sub__(self, other):
         year = self.year + other.year
@@ -24,9 +24,10 @@ class Date:
 
 
 def main():
-    date1 = Date()
-    date1.get_DOB()
-    
+    # year,month,day = get_DOB
+    # date1 = Date(year,month,day)
+    get_today()
+
 
 if __name__ == "__main__":
     main()
