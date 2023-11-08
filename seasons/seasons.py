@@ -10,11 +10,11 @@ class Date:
         year = int(year)
         month = int(month)
         day = int(day)
-        d = date(year, month, day)
-        return d
+        return year,month,day
 
     def get_today():
         today = date.today()
+        return today
 
     def __sub__(self, other):
         year = self.year + other.year
@@ -24,9 +24,9 @@ class Date:
 
 
 def main():
-    get_DOB()
-    get_today()
-
+    date1 = Date()
+    date1.get_DOB()
+    
 
 if __name__ == "__main__":
     main()
