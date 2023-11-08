@@ -1,5 +1,6 @@
 from datetime import date
-
+class Date:
+    
 
 def main():
     ...
