@@ -12,23 +12,22 @@ class Date:
         day = int(day)
         return year,month,day
 
+
     def get_today():
-        today = date.today()
-        print(today)
+        year,month,day = str(date.today()).split("-")
+        return year,month,day
 
     def __sub__(self, other):
         year = self.year + other.year
         month = self.month + other.month
         day = self.day + other.day
         return Vault(galleons, sickles, knuts)
-def get_today():
-    today = date.today()
-    print(today)
 
 def main():
-    get_today()
-    # year,month,day = get_DOB
-    # date1 = Date(year,month,day)
-
+    year,month,day = get_DOB()
+    date1 = Date(year,month,day)
+    year,month,day = get_today()
+    date2 = Date(year,month,day)
+    print(date1,date2)
 if __name__ == "__main__":
     main()
