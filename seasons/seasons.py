@@ -17,7 +17,12 @@ class Date:
         today = date.today()
         print(today)
 
-    
+    def __sub__(self, other):
+        year = self.year + other.year
+        month = self.month + other.month
+        day = self.day + other.day
+        return Vault(galleons, sickles, knuts)
+
 
 def main():
     get_DOB()
