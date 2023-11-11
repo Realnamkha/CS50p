@@ -8,10 +8,11 @@ class Jar:
     #     return f"{self.name}"
 
     def deposit(self, n):
-        self.size = Jar.size
-        total = self.size + n
+        self.x = Jar.size
+        total = self.x + n
         if (total<=self.capacity):
             Jar.size = total
+            return Jar.size
         else:
             raise ValueError("Capacity Exceeded")
 
@@ -37,6 +38,7 @@ class Jar:
 def main():
     try:
         namkha = Jar(30)
+        print(namkha.deposit(10))
         print(namkha.capacity)
     except ValueError as e:
         print(e)
