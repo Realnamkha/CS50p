@@ -1,54 +1,59 @@
-from datetime import date, datetime
-import inflect
+
 import sys
 import re
+from datetime import datetime, date
+import inflect
 
 p = inflect.engine()
 
-class Time:
-    def __init__(self, target_date):
-        self.target_date  = target_date
+
+class Born:
+    def __init__(self,date,dif):
+        self.date = date
 
     def __str__(self):
-        # prints out the output at the end
+        return f"{self.date}"
 
-    # operator overload
-    def __sub__(self, other):
-        year = self.year + other.year
-        month = self.month + other.month
-        day = self.day + other.day
-        return Vault(galleons, sickles, knuts)
-
-    @staticmethod
-    def validate_date(target_date):
-        date = target_date.strip()
-        if check := re.search(r"^([0-9]{4})\-([0-9]{2})\-([0-9]{2})$",date):
+    @classmethod
+    def get(cls):
+        birth = input("Birth date: ")
+        check = birth
+        if check := re.search(r"^([0-9]{4})\-([0-9]{2})\-([0-9]{2})$",check):
             year = int(check.group(1))
             month = int(check.group(2))
             day = int(check.group(3))
             if month <= 12 and day <= 31 :
-                return True
+                birth = date(year,month,day)
+                return birth
             else:
-               return False
+                sys.exit("Invalid date format")
         else :
-            return False
+            sys.exit("Invalid date format")
+
+
+class Today:
+    def __init__(self,today):
+        self.today = today
+
+    def __str__(self):
+        return f"{self.today}"
 
     @classmethod
     def get(cls):
-        birth_date = input("Enter Your DOB :")
-        valid = validate_date(birth_date)
-        if valid:
-            return cls(birth_date)
-        else:
-            sys.exit("Invalid Date Format")
-        # Remember datetime.strptime allows you to turn a string into a DateTime object to make it easier for math operations
+        today = date.today()
+        return today
 
 def main():
-    then = Time.get()
+    born = Born.get()
+    today =Today.get()
+    dif = today - born
+    dif = dif.days
+    minutes = dif*1440
+    words = p.number_to_words(minutes,andword="")
+    print(f"{words.capitalize()} minutes")
 
-    # gets the current date so no need to ask the user
-    now = Time(date.today())
-    print(now - then)
 
-if _name_ == "__main__":
+
+
+if name == "__main__":
     main()
