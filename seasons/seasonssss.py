@@ -14,7 +14,10 @@ class Time:
 
     # operator overload
     def __sub__(self, other):
-        # perform the subtraction and return the result
+        year = self.year + other.year
+        month = self.month + other.month
+        day = self.day + other.day
+        return Vault(galleons, sickles, knuts)
 
     @staticmethod
     def validate_date(target_date):
@@ -26,15 +29,18 @@ class Time:
             if month <= 12 and day <= 31 :
                 return True
             else:
-                sys.exit("Invalid date format")
+               return False
         else :
-            sys.exit("Invalid date format")
+            return False
 
     @classmethod
     def get(cls):
         birth_date = input("Enter Your DOB :")
         valid = validate_date(birth_date)
-        # if valid, pass in that user input the cls, otherwise exit using sys.exit() with an error message
+        if valid:
+            return cls(birth_date)
+        else:
+            sys.exit("Invalid Date Format")
         # Remember datetime.strptime allows you to turn a string into a DateTime object to make it easier for math operations
 
 def main():
