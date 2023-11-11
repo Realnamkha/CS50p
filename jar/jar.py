@@ -46,10 +46,6 @@ class Jar:
 def main():
     try:
         namkha = Jar(30)
-        print(namkha.capacity)
-        print(namkha.deposit(20))
-        print(namkha.withdraw(15))
-        print(namkha.size)
         print(namkha)
     except ValueError as e:
         print(e)

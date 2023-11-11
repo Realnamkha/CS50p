@@ -3,7 +3,7 @@ import pytest
 
 def test_init():
     with pytest.raises(ValueError):
-         jar = Jar(-1)
+        jar = Jar(-1)
         jar = Jar(10)
         assert str(jar) == ''
 
