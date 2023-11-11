@@ -2,12 +2,18 @@ class Jar:
     size = 0
     def __init__(self, capacity=12):
         self.capacity = capacity
+        self.size = Jar.size
+
 
     # def __str__(self):
     #     return f"{self.name}"
 
     def deposit(self, n):
-        
+        self.size = Jar.size
+        total = self.size + n
+        if (total<=self.capacity):
+            Jar.size = total
+
 
     def withdraw(self, n):
         ...
