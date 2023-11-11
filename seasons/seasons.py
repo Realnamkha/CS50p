@@ -1,35 +1,59 @@
-from datetime import date
-class Date:
-    def __init__(self,year,month,day):
-        self.year = year
-        self.month = month
-        self.day = day
+
+import sys
+import re
+from datetime import datetime, date
+import inflect
+
+p = inflect.engine()
+
+
+class Born:
+    def __init__(self,date,dif):
+        self.date = date
+
+    def __str__(self):
+        return f"{self.date}"
 
     @classmethod
-    def get_DOB(cls):
-        year,month,day = input("Enter Your DOB :").strip().split("-")
-        year = int(year)
-        month = int(month)
-        day = int(day)
-        return cls(year,month,day)
+    def get(cls):
+        birth = input("Birth date: ")
+        check = birth
+        if check := re.search(r"^([0-9]{4})\-([0-9]{2})\-([0-9]{2})$",check):
+            year = int(check.group(1))
+            month = int(check.group(2))
+            day = int(check.group(3))
+            if month <= 12 and day <= 31 :
+                birth = date(year,month,day)
+                return birth
+            else:
+                sys.exit("Invalid date format")
+        else :
+            sys.exit("Invalid date format")
+
+
+class Today:
+    def __init__(self,today):
+        self.today = today
+
+    def __str__(self):
+        return f"{self.today}"
 
     @classmethod
-    def get_today(cls):
-        year,month,day = str(date.today()).split("-")
-        return cls(year,month,day)
-
-    def __sub__(self, other):
-        year = self.year + other.year
-        month = self.month + other.month
-        day = self.day + other.day
-        return Vault(galleons, sickles, knuts)
+    def get(cls):
+        today = date.today()
+        return today
 
 def main():
-    year,month,day = Date.get_DOB()
-    date1 = Date(year,month,day)
-    year,month,day = Date.get_today()
-    date2 = Date()
-    date2 = Date(year,month,day)
-    print(date1,date2)
+    born = Born.get()
+    today =Today.get()
+    dif = today - born
+    dif = dif.days
+    minutes = dif*1440
+    words = p.number_to_words(minutes,andword="")
+    print(f"{words.capitalize()} minutes")
+
+
+
+
 if __name__ == "__main__":
     main()
