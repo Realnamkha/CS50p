@@ -27,9 +27,11 @@ class Jar:
         ...
 
 def main():
-    namkha = Jar(-1)
-    print(namkha.capacity)
-
+    try:
+        namkha = Jar(-1)
+        print(namkha.capacity)
+    except ValueError as e:
+        print(e)
 
 
 if __name__ == "__main__":
