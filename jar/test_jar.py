@@ -30,7 +30,7 @@ def test_deposit():
 
 
 
- def test_withdraw():
+def test_withdraw():
     jar = Jar(10)
 
     jar.deposit(8)
