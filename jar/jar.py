@@ -2,7 +2,6 @@ class Jar:
     size = 0
     def __init__(self, capacity=12):
         self.capacity = capacity
-        self.size = Jar.size
 
 
     # def __str__(self):
@@ -13,6 +12,8 @@ class Jar:
         total = self.size + n
         if (total<=self.capacity):
             Jar.size = total
+        else:
+            raise ValueError("Capacity Exceeded")
 
 
     def withdraw(self, n):
@@ -35,7 +36,7 @@ class Jar:
 
 def main():
     try:
-        namkha = Jar(-1)
+        namkha = Jar(30)
         print(namkha.capacity)
     except ValueError as e:
         print(e)
