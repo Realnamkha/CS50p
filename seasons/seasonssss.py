@@ -18,7 +18,8 @@ class Time:
 
     @staticmethod
     def validate_date(target_date):
-        
+        date = target_date.strip()
+        matches = re.search(r"^(.+), (.+)$", date)
 
     @classmethod
     def get(cls):
