@@ -32,8 +32,8 @@ class Time:
 
     @classmethod
     def get(cls):
-        # prompt the user for input
-        # validate the input by calling the static method validate_date and pass the user's input
+        birth_date = input("Enter Your DOB :")
+        valid = validate_date(birth_date)
         # if valid, pass in that user input the cls, otherwise exit using sys.exit() with an error message
         # Remember datetime.strptime allows you to turn a string into a DateTime object to make it easier for math operations
 
