@@ -27,8 +27,8 @@ class Jar:
         ...
 
 def main():
-    namkha = Jar(30)
-    return namkha.capacity
+    namkha = Jar(-1)
+    print(namkha.capacity)
 
 
 
