@@ -15,7 +15,7 @@ class Jar:
 
 
     def withdraw(self, n):
-        if self._size >= 0:
+        if self._size - n >= 0:
             self._size -= n
             return self._size
         else:
