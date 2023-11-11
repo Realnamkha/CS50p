@@ -1,14 +1,15 @@
 class Jar:
     def __init__(self, capacity=12):
         self.capacity = capacity
+        self.size = 0
 
     # def __str__(self):
     #     return f"{self.name}"
 
     def deposit(self, n):
-        self._size = int(self._size) + n
+        self.size = int(self.size) + n
         if (total<=self.capacity):
-            return self._size
+            return self.size
         else:
             raise ValueError("Capacity Exceeded")
 
