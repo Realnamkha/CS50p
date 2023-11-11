@@ -19,7 +19,7 @@ class Time:
     @staticmethod
     def validate_date(target_date):
         date = target_date.strip()
-        if check := re.search(r"^([0-9]{4})\-([0-9]{2})\-([0-9]{2})$",check):
+        if check := re.search(r"^([0-9]{4})\-([0-9]{2})\-([0-9]{2})$",date):
             year = int(check.group(1))
             month = int(check.group(2))
             day = int(check.group(3))
