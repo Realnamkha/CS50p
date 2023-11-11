@@ -19,7 +19,17 @@ class Time:
     @staticmethod
     def validate_date(target_date):
         date = target_date.strip()
-        matches = re.search(r"^(.+), (.+)$", date)
+        if check := re.search(r"^([0-9]{4})\-([0-9]{2})\-([0-9]{2})$",check):
+            year = int(check.group(1))
+            month = int(check.group(2))
+            day = int(check.group(3))
+            if month <= 12 and day <= 31 :
+                birth = date(year,month,day)
+                return birth
+            else:
+                sys.exit("Invalid date format")
+        else :
+            sys.exit("Invalid date format")
 
     @classmethod
     def get(cls):
