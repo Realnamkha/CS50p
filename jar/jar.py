@@ -1,4 +1,5 @@
 class Jar:
+    size = 0
     def __init__(self, capacity=12):
         self.capacity = capacity
 
@@ -6,7 +7,7 @@ class Jar:
     #     return f"{self.name}"
 
     def deposit(self, n):
-        ...
+        
 
     def withdraw(self, n):
         ...
