@@ -8,8 +8,8 @@ class Jar:
     #     return f"{self.name}"
 
     def deposit(self, n):
-        self.x = Jar.size
-        total = self.x + n
+        x = Jar.size
+        total = x + n
         if (total<=self.capacity):
             Jar.size = total
             return Jar.size
