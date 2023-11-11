@@ -13,8 +13,24 @@ class Jar:
 
     @property
     def capacity(self):
-        ...
+        return self._capacity
+
+    @capacity.setter
+    def capacity(self, capacity):
+        if int(capacity)>=0:
+            self._capacity = capacity
+        else:
+            raise ValueError("Invalid Capacity")
 
     @property
     def size(self):
         ...
+
+def main():
+    namkha = Jar(30)
+    return namkha.capacity
+
+
+
+if __name__ == "__main__":
+    main()
