@@ -6,7 +6,7 @@ class Jar:
     #     return f"{self.name}"
 
     def deposit(self, n):
-        self.size = int(self.size) + n
+        self._size = int(self.size) + n
         if (total<=self.capacity):
             return self.size
         else:
@@ -33,7 +33,10 @@ class Jar:
 
     @size.setter
     def size(self, size):
-        self._size = size
+        if 0 <= size <= self.capacity:
+            self._size = size
+        else:
+            raise ValueError("Invalid Size")
 
 def main():
     try:
