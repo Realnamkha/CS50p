@@ -24,8 +24,7 @@ class Time:
             month = int(check.group(2))
             day = int(check.group(3))
             if month <= 12 and day <= 31 :
-                birth = date(year,month,day)
-                return birth
+                return True
             else:
                 sys.exit("Invalid date format")
         else :
