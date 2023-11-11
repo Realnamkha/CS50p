@@ -1,17 +1,14 @@
 class Jar:
-    size = 0
     def __init__(self, capacity=12):
         self.capacity = capacity
-        self.cookies = Jar.size
 
     # def __str__(self):
     #     return f"{self.name}"
 
     def deposit(self, n):
-        Jar.size = Jar.size + n
+        self.size = int(self.size) + n
         if (total<=self.capacity):
-            Jar.size = total
-            return Jar.size
+            return self.size
         else:
             raise ValueError("Capacity Exceeded")
 
@@ -36,9 +33,7 @@ class Jar:
 
     @size.setter
     def size(self, size):
-        
-        else:
-            raise ValueError("Invalid Capacity")
+        self._size = size
 
 def main():
     try:
