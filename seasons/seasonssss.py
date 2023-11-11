@@ -18,8 +18,7 @@ class Time:
 
     @staticmethod
     def validate_date(target_date):
-        # use regex to validate the proper format
-        # return boolean (true if the match is found, false otherwise)
+        
 
     @classmethod
     def get(cls):
