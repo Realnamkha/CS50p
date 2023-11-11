@@ -4,6 +4,9 @@ import pytest
 def test_init():
     with pytest.raises(ValueError):
          jar = Jar(-1)
+        jar = Jar(10)
+        assert str(jar) == ''
+
 
 
 def test_str():
@@ -16,8 +19,23 @@ def test_str():
 
 
 def test_deposit():
-    ...
+    jar = Jar(10)
+
+    jar.deposit(10)
+    assert str(jar) == '🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪'
+
+    with pytest.raises(ValueError):
+         jar.deposit(1)
 
 
-def test_withdraw():
-    ...
+
+
+ def test_withdraw():
+    jar = Jar(10)
+
+    jar.deposit(8)
+    jar.withdraw(4)
+    assert str(jar) == '🍪🍪🍪🍪'
+
+    with pytest.raises(ValueError):
+         jar.deposit(8)
