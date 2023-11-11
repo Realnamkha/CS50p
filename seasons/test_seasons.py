@@ -1,6 +1,6 @@
-from seasons import  as f
+from seasons import get
 import pytest
 
 def test_input():
      with pytest.raises(TypeError):
-         f(12-12-2012) == 'Invalid date'
+         get(12-12-2012) == 'Invalid date'
