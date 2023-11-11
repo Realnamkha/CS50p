@@ -3,8 +3,8 @@ class Jar:
         self.capacity = capacity
         self.size = 0
 
-    # def __str__(self):
-    #     return f"{self.name}"
+    def __str__(self):
+        return f"🍪*{self._size}"
 
     def deposit(self, n):
         if self._size + n <= self._capacity:
@@ -50,6 +50,7 @@ def main():
         print(namkha.deposit(20))
         print(namkha.withdraw(15))
         print(namkha.size)
+        print(namkha)
     except ValueError as e:
         print(e)
 
