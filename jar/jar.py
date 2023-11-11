@@ -6,9 +6,9 @@ class Jar:
     #     return f"{self.name}"
 
     def deposit(self, n):
-        self._size = int(self.size) + n
+        self._size = int(self._size) + n
         if (total<=self.capacity):
-            return self.size
+            return self._size
         else:
             raise ValueError("Capacity Exceeded")
 
