@@ -15,7 +15,11 @@ class Jar:
 
 
     def withdraw(self, n):
-        ...
+        if self._size >= 0:
+            self._size -= n
+            return self._size
+        else:
+            raise ValueError("No cookies left")
 
     @property
     def capacity(self):
@@ -42,8 +46,10 @@ class Jar:
 def main():
     try:
         namkha = Jar(30)
-        print(namkha.deposit(10))
         print(namkha.capacity)
+        print(namkha.deposit(20))
+        print(namkha.withdraw(15))
+        print(namkha.size)
     except ValueError as e:
         print(e)
 
