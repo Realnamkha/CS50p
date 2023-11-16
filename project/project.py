@@ -11,12 +11,13 @@ def delete_expense():
     print("Delete expense")
 
 def main():
+    while True:
         print("Welcome to Expense Tracker")
         print("1. Record Expense ")
         print("2. View Expense ")
         print("3. Delete Expense ")
         print("4. Exit ")
-    while True:
+
         choice = input("Enter your choice\n")
 
         match choice:
