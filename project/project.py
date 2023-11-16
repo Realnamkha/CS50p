@@ -1,32 +1,32 @@
+import sys
+def record_expense():
+    print("record_expense")
+
+
+def view_expense():
+    print("View_expense")
+
+
+def delete_expense():
+    print("Delete expense")
+
 def main():
     print("Welcome to Expense Tracker")
     print("1. Record Expense ")
     print("2. View Expense ")
     print("3. Delete Expense ")
-
-    choice = input(" Enter your choice ")
+    print("4. Exit ")
+    choice = input("Enter your choice\n")
 
     match choice:
         case "1":
-            pass
+            record_expense()
         case "2":
-            pass
+            view_expense()
         case "3":
-            pass
-        case _:
-            print(" Enter a valid choice ")
-
-
-def record_expense():
-    ...
-
-
-def delete_expense():
-    ...
-
-
-def function_n():
-    ...
+            delete_expense()
+        case "4":
+            sys.exit("System exited ")
 
 
 if __name__ == "__main__":
