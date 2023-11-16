@@ -16,6 +16,7 @@ def main():
     print("2. View Expense ")
     print("3. Delete Expense ")
     print("4. Exit ")
+    
     choice = input("Enter your choice\n")
 
     match choice:
@@ -27,6 +28,8 @@ def main():
             delete_expense()
         case "4":
             sys.exit("System exited ")
+        case "_":
+            print("Enter a valid choice")
 
 
 if __name__ == "__main__":
