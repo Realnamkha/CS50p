@@ -31,7 +31,8 @@ def main():
                 sys.exit("System exited ")
             case "_":
                 print("Enter a valid choice")
-
+                continue
+        break
 
 if __name__ == "__main__":
     main()
