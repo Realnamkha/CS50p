@@ -26,13 +26,11 @@ def main():
                 break
             case "2":
                 view_expense()
-                break
             case "3":
                 delete_expense()
-                break
             case "4":
                 sys.exit("System exited ")
-            case "_":
+            case _:
                 print("Enter a valid choice")
 
 if __name__ == "__main__":
