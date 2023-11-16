@@ -1,7 +1,7 @@
 def main():
     print("Welcome to Expense Tracker")
     print("1. Record Expense ")
-    print("2. Update Expense ")
+    print("2. View Stats ")
     print("3. Delete Expense ")
 
     choice = input(" Enter your choice ")
@@ -17,11 +17,11 @@ def main():
             print(" Enter a valid choice ")
 
 
-def function_1():
+def record_expense():
     ...
 
 
-def function_2():
+def delete_expense():
     ...
 
 
