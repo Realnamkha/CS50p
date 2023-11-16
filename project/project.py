@@ -1,6 +1,11 @@
 import sys
 def record_expense():
-    print("record_expense")
+    print("Please Select the Category ")
+    print("1.1 Food")
+    print("1.2 Stationary")
+    print("1.3 Travel")
+    print("1.4 Entertainment")
+    print("1.5 Others")
 
 
 def view_expense():
