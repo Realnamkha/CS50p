@@ -1,5 +1,5 @@
 def main():
-    
+    print("Welcome to Expense Tracker")
 
 
 def function_1():
