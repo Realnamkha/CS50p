@@ -25,8 +25,9 @@ def record_expense():
         category = "Invalid Selection"
 
     with open("records.csv", "a") as file:
-    writer = csv.DictWriter(file, fieldnames=["expense_amount", "week_day", "category"])
-    writer.writerow({"expense_amount": expense_amount, "week_day": week_day,"category":category})
+        writer = csv.DictWriter(file, fieldnames=["expense_amount", "week_day", "category"])
+        writer.writeheader()
+        writer.writerow({"expense_amount": expense_amount, "week_day": week_day,"category":category})
 
 def view_expense():
     print("View_expense")
