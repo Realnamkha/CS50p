@@ -31,7 +31,8 @@ def record_expense():
 
 def view_expense():
     print("***View_Expenses***")
-
+    print("1 Total Expenses :",)
+    print("2 Stationary")
 
 
 def delete_expense():
