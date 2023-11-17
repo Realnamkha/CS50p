@@ -4,13 +4,13 @@ import csv
 def record_expense():
     expense_amount = input("Enter the amount spent :")
     week_day = input("Enter the day of expenditure :")
-    month = 
-    print("Please Select the Category ")
-    print("1.1 Food")
-    print("1.2 Stationary")
-    print("1.3 Travel")
-    print("1.4 Entertainment")
-    print("1.5 Others")
+    print("***Categories*** ")
+    print("1 Food")
+    print("2 Stationary")
+    print("3 Travel")
+    print("4 Entertainment")
+    print("5 Others")
+    category = input("Please select the category :")
 
 
 def view_expense():
