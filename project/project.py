@@ -22,7 +22,7 @@ def record_expense():
     elif category_input == "5":
         category = "Others"
     else:
-        category = "Invalid Selection"
+        print("Invalid Selection")
 
     with open("records.csv", "a") as file:
         writer = csv.DictWriter(file, fieldnames=["expense_amount", "week_day", "category"])
