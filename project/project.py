@@ -38,6 +38,8 @@ def view_expense():
         for row in reader:
             total_expense += int(row["expense_amount"])
     print(f"Total Expenses :{total_expense}")
+    print("Expense by Category")
+    
 
 
 def delete_expense():
