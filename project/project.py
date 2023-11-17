@@ -1,4 +1,6 @@
 import sys
+import csv
+
 def record_expense():
     print("Please Select the Category ")
     print("1.1 Food")
@@ -31,8 +33,10 @@ def main():
                 break
             case "2":
                 view_expense()
+                break
             case "3":
                 delete_expense()
+                break
             case "4":
                 sys.exit("System exited ")
             case _:
