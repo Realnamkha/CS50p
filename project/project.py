@@ -69,6 +69,7 @@ def main():
         print("1. Record Expense ")
         print("2. View Expense ")
         print("3. Delete Expense ")
+        print("4. View Stats ")
         print("4. Exit ")
 
         choice = input("Enter your choice\n")
