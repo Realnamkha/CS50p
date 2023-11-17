@@ -12,6 +12,9 @@ def record_expense():
     print("5 Others")
     category = input("Please select the category :")
 
+    with open("records.csv", "a") as file:
+    writer = csv.DictWriter(file, fieldnames=["expense_amount", "week_day", "category"])
+    writer.writerow({"expense_amount": expense_amount, "week_day": week_day, })
 
 def view_expense():
     print("View_expense")
