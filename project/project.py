@@ -30,7 +30,8 @@ def record_expense():
         writer.writerow({"expense_amount": expense_amount, "week_day": week_day,"category":category})
 
 def view_expense():
-    print("View_expense")
+    print("***View_Expenses")
+    
 
 
 def delete_expense():
