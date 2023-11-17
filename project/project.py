@@ -33,10 +33,10 @@ def view_expense():
     print("***View_Expenses***")
     with open("records.csv") as file:
         reader = csv.DictReader(file)
+        total_expense = 0
         for row in reader:
-            total_expense = r
-    print("1 Total Expenses :",)
-    print("2 Stationary")
+            total_expense += int(row["expense_amount"])
+    print(f"Total Expenses :{total_expense}")
 
 
 def delete_expense():
