@@ -62,7 +62,7 @@ def delete_expense():
         if file.tell() == 0:
             writer.writeheader()
         writer.writerows(rows_to_keep)
-    
+        print("Deleted successfully")
 def main():
     while True:
         print("Welcome to Expense Tracker")
