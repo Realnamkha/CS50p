@@ -35,11 +35,13 @@ def view_expense():
     with open("records.csv") as file:
         reader = csv.DictReader(file)
         total_expense = 0
+        expense_by_category = {}
         for row in reader:
             total_expense += int(row["expense_amount"])
+            expense_by_category[category] = expense_by_category.get(category, 0) + expense_amount
     print(f"Total Expenses :{total_expense}")
     print("Expense by Category")
-    
+
 
 
 def delete_expense():
