@@ -48,11 +48,19 @@ def view_expense():
 
 def delete_expense():
     amount, category, day = input("Enter the amount to be deleted, category, and day (separated by spaces): ").split()
+    rows_to_keep = []
     with open("records.csv") as file:
         reader = csv.DictReader(file)
         for row in reader:
             if (row["expense_amount"]==amount and row["category"]==category and row["week_day"]==day):
-                row.d
+                continue
+            else:
+                rows_to_keep.append(row)
+    fieldnames = reader.fieldnames
+    with open("records.csv", mode='w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows_to_keep)
 def main():
     while True:
         print("Welcome to Expense Tracker")
