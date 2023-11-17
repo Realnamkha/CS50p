@@ -2,6 +2,9 @@ import sys
 import csv
 
 def record_expense():
+    expense_amount = input("Enter the amount spent :")
+    week_day = input("Enter the day of expenditure :")
+    month = 
     print("Please Select the Category ")
     print("1.1 Food")
     print("1.2 Stationary")
