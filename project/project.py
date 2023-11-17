@@ -31,6 +31,10 @@ def record_expense():
 
 def view_expense():
     print("***View_Expenses***")
+    with open("records.csv") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            total_expense = r
     print("1 Total Expenses :",)
     print("2 Stationary")
 
