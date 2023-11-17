@@ -30,6 +30,8 @@ def record_expense():
             writer.writeheader()
         writer.writerow({"expense_amount": expense_amount, "week_day": week_day,"category":category})
 
+    main()
+
 def view_expense():
     print("***View_Expenses***")
     with open("records.csv") as file:
@@ -45,6 +47,8 @@ def view_expense():
     print("Expense by Category:")
     for category, category_expense in expense_by_category.items():
             print(f"{category}: {category_expense}")
+
+    main()
 
 def delete_expense():
     amount, category, day = input("Enter the amount to be deleted, category, and day (separated by spaces): ").split()
@@ -63,6 +67,7 @@ def delete_expense():
             writer.writeheader()
         writer.writerows(rows_to_keep)
         print("Deleted successfully")
+    main()
 def main():
     while True:
         print("Welcome to Expense Tracker")
