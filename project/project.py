@@ -47,7 +47,9 @@ def view_expense():
             print(f"{category}: {category_expense}")
 
 def delete_expense():
-    print("Delete expense")
+    amount = input("Enter the amount to be deleted: ")
+    category = input("Enter the category: ")
+    day = input("Enter the day: ")
 
 def main():
     while True:
