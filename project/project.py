@@ -10,11 +10,23 @@ def record_expense():
     print("3 Travel")
     print("4 Entertainment")
     print("5 Others")
-    category = input("Please select the category :")
+    category_input = input("Please select the category (1-5): ")
+    if category_input == "1":
+        category = "Food"
+    elif category_input == "2":
+        category = "Stationary"
+    elif category_input == "3":
+        category = "Travel"
+    elif category_input == "4":
+        category = "Entertainment"
+    elif category_input == "5":
+        category = "Others"
+    else:
+        category = "Invalid Selection"
 
     with open("records.csv", "a") as file:
     writer = csv.DictWriter(file, fieldnames=["expense_amount", "week_day", "category"])
-    writer.writerow({"expense_amount": expense_amount, "week_day": week_day, })
+    writer.writerow({"expense_amount": expense_amount, "week_day": week_day,"category":category})
 
 def view_expense():
     print("View_expense")
