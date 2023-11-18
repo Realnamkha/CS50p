@@ -71,7 +71,7 @@ def delete_expense():
     main()
 
 def view_stats():
-    df = pd.read_csv('athlete_events.csv')
+    df = pd.read_csv('records.csv')
     print(df)
 def main():
     while True:
@@ -80,7 +80,7 @@ def main():
         print("2. View Expense ")
         print("3. Delete Expense ")
         print("4. View Stats ")
-        print("4. Exit ")
+        print("5. Exit ")
 
         choice = input("Enter your choice\n")
 
@@ -95,6 +95,9 @@ def main():
                 delete_expense()
                 break
             case "4":
+                view_stats()
+                break
+            case "5":
                 sys.exit("System exited ")
             case _:
                 print("Enter a valid choice")
