@@ -5,15 +5,15 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 def record_expense():
-    expense_amount = input("Enter the amount spent :")
-    week_day = input("Enter the day of expenditure :")
+    expense_amount = input("Enter the amount spent :").strip()
+    week_day = input("Enter the day of expenditure :").lower().strip()
     print("***Categories*** ")
     print("1 Food")
     print("2 Stationary")
     print("3 Travel")
     print("4 Entertainment")
     print("5 Others")
-    category_input = input("Please select the category (1-5): ")
+    category_input = input("Please select the category (1-5): ").strip()
     if category_input == "1":
         category = "Food"
     elif category_input == "2":
@@ -104,7 +104,7 @@ def main():
         print("4. View Stats ")
         print("5. Exit ")
 
-        choice = input("Enter your choice\n")
+        choice = input("Enter your choice\n").strip()
 
         match choice:
             case "1":
