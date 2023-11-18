@@ -76,9 +76,16 @@ def view_stats():
     df = pd.read_csv('records.csv')
     print(df)
     plt.figure(figsize=(10, 6))
-    sns.histplot(df['expense_amount'], bins=20, kde=True)
-    plt.title('Expense Distribution')
+    sns.barplot(x='week_day', y='expense_amount', data=df, hue='category')
+    plt.title('Expense by Week Day')
     plt.show()
+
+    plt.figure(figsize=(10, 6))
+    sns.barplot(x='category', y='expense_amount', data=df, hue='category')
+    plt.title('Expense by Week Day')
+    plt.show()
+
+    main()
 def main():
     while True:
         print("Welcome to Expense Tracker")
