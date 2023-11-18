@@ -71,7 +71,8 @@ def delete_expense():
     main()
 
 def view_stats():
-
+    df = pd.read_csv('athlete_events.csv')
+    print(df)
 def main():
     while True:
         print("Welcome to Expense Tracker")
