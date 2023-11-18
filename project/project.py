@@ -2,6 +2,7 @@ import sys
 import csv
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 def record_expense():
     expense_amount = input("Enter the amount spent :")
@@ -74,6 +75,10 @@ def delete_expense():
 def view_stats():
     df = pd.read_csv('records.csv')
     print(df)
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['expense_amount'], bins=20, kde=True)
+    plt.title('Expense Distribution')
+    plt.show()
 def main():
     while True:
         print("Welcome to Expense Tracker")
