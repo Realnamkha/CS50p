@@ -1,5 +1,6 @@
 import sys
 import csv
+import pandas as pd
 
 def record_expense():
     expense_amount = input("Enter the amount spent :")
@@ -68,6 +69,9 @@ def delete_expense():
         writer.writerows(rows_to_keep)
         print("Deleted successfully")
     main()
+
+def view_stats():
+
 def main():
     while True:
         print("Welcome to Expense Tracker")
