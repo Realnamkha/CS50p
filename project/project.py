@@ -3,7 +3,7 @@ import csv
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+from prettytable import PrettyTable
 def record_expense():
     expense_amount = input("Enter the amount spent :").strip()
     week_day = input("Enter the day of expenditure :").lower().strip()
