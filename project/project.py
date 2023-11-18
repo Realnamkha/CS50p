@@ -74,15 +74,24 @@ def delete_expense():
 
 def view_stats():
     df = pd.read_csv('records.csv')
-    print(df)
-    plt.figure(figsize=(10, 6))
-    sns.barplot(x='week_day', y='expense_amount', data=df, hue='category')
-    plt.title('Expense by Week Day')
-    plt.show()
+    fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(15, 10))
+    sns.barplot(x='week_day', y='expense_amount', data=df, hue='category', ax=axes[0, 0])
+    axes[0, 0].set_title('Expense by Week Day')
 
-    plt.figure(figsize=(10, 6))
-    sns.barplot(x='category', y='expense_amount', data=df, hue='category')
-    plt.title('Expense by Week Day')
+
+    sns.barplot(x='category', y='expense_amount', data=df, hue='category', ax=axes[0, 1])
+    axes[0, 1].set_title('Expense by Category')
+
+
+    sns.boxplot(x='category', y='expense_amount', data=df, ax=axes[1, 0])
+    axes[1, 0].set_title('Expense Distribution by Category')
+
+
+    sns.histplot(df['expense_amount'], bins=20, kde=True, ax=axes[1, 1])
+    axes[1, 1].set_title('Expense Distribution')
+
+
+    plt.tight_layout()
     plt.show()
 
     main()
