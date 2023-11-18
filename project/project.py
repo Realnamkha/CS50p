@@ -1,6 +1,7 @@
 import sys
 import csv
 import pandas as pd
+import seaborn as sns
 
 def record_expense():
     expense_amount = input("Enter the amount spent :")
