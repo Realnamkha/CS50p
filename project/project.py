@@ -97,12 +97,16 @@ def view_stats():
     main()
 def main():
     while True:
+        menu_table = PrettyTable()
+        menu_table.field_names = ["Option", "Description"]
+
+        menu_table.add_row(["1", "Record Expense"])
+        menu_table.add_row(["2", "View Expense"])
+        menu_table.add_row(["3", "Delete Expense"])
+        menu_table.add_row(["4", "View Stats"])
+        menu_table.add_row(["5", "Exit"])
         print("Welcome to Expense Tracker")
-        print("1. Record Expense ")
-        print("2. View Expense ")
-        print("3. Delete Expense ")
-        print("4. View Stats ")
-        print("5. Exit ")
+        print(menu_table)
 
         choice = input("Enter your choice\n").strip()
 
