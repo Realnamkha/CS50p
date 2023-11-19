@@ -54,6 +54,9 @@ def view_expense():
     for category, category_expense in expense_by_category.items():
             print(f"{category}: {category_expense}")
 
+    for day, day_expense in expense_by_day.items():
+            print(f"{day}: {day_expense}")
+
     main()
 
 def delete_expense():
