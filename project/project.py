@@ -8,7 +8,7 @@ from prettytable import DOUBLE_BORDER
 def record_expense():
     expense_amount = input("Enter the amount spent :").strip()
     week_day = input("Enter the day of expenditure :").lower().strip()
-    print("***Categories*** ")
+    print("***Categories***")
     print("1 Food")
     print("2 Stationary")
     print("3 Travel")
