@@ -5,6 +5,35 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from prettytable import PrettyTable
 from prettytable import DOUBLE_BORDER
+
+def get_user_input():
+    expense_amount = input("Enter the amount spent: ").strip()
+    try:
+        expense_amount = float(expense_amount)
+    except ValueError:
+        print("Invalid expense amount. Please enter a valid number.")
+        return None, None, None
+
+    week_day = input("Enter the day of expenditure: ").lower().strip()
+
+    print("***Categories***")
+    print("1 Food")
+    print("2 Stationary")
+    print("3 Travel")
+    print("4 Entertainment")
+    print("5 Others")
+    category_input = input("Please select the category (1-5): ").strip()
+
+    if category_input not in {"1", "2", "3", "4", "5"}:
+        print("Invalid category selection. Please enter a number between 1 and 5.")
+        return None, None, None
+
+    categories = ["Food", "Stationary", "Travel", "Entertainment", "Others"]
+    category = categories[int(category_input) - 1]
+
+    return expense_amount, week_day, category
+
+
 def record_expense():
     expense_amount = input("Enter the amount spent :").strip()
     week_day = input("Enter the day of expenditure :").lower().strip()
