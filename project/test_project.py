@@ -4,8 +4,9 @@ from project import get_user_input,record_expense,view_expense,delete_expense,vi
 def test_get_user_input():
     expense_amount = 1000
     week_day = sunday
-    category_input = "1"
+    if category_input = "1":
+        category = "Food"
 
-    assert get_user_input() == expense_amount,week_day,category_input
+    assert get_user_input() == expense_amount,week_day,category
 
 
