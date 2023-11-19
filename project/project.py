@@ -31,7 +31,7 @@ def get_user_input():
     categories = ["Food", "Stationary", "Travel", "Entertainment", "Others"]
     category = categories[int(category_input) - 1]
 
-    print(expense_amount, week_day, category)
+    return expense_amount, week_day, category
 
 
 def record_expense():
