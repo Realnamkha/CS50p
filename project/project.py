@@ -41,11 +41,14 @@ def view_expense():
         reader = csv.DictReader(file)
         total_expense = 0
         expense_by_category = {}
+        expense_by_day = {}
         for row in reader:
             expense_amount = int(row["expense_amount"])
             total_expense += expense_amount
             category = row["category"]
+            week_day = row["week_day"]
             expense_by_category[category] = expense_by_category.get(category, 0) + expense_amount
+            expense_by_day[week_day] = expense_by_day.get(week_day, 0) + expense_amount
     print(f"Total Expenses :{total_expense}")
     print("Expense by Category:")
     for category, category_expense in expense_by_category.items():
