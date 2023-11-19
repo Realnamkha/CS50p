@@ -119,7 +119,6 @@ def main():
         menu_table.add_row(["4", "View Stats"])
         menu_table.add_row(["5", "Exit"])
         print("Welcome to Expense Tracker")
-        menu_table.set_style(MSWORD_FRIENDLY)
         print(menu_table)
 
         choice = input("Enter your choice\n").strip()
