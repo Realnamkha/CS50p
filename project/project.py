@@ -35,34 +35,16 @@ def get_user_input():
 
 
 def record_expense():
-    expense_amount = input("Enter the amount spent :").strip()
-    week_day = input("Enter the day of expenditure :").lower().strip()
-    print("***Categories***")
-    print("1 Food")
-    print("2 Stationary")
-    print("3 Travel")
-    print("4 Entertainment")
-    print("5 Others")
-    category_input = input("Please select the category (1-5): ").strip()
-    if category_input == "1":
-        category = "Food"
-    elif category_input == "2":
-        category = "Stationary"
-    elif category_input == "3":
-        category = "Travel"
-    elif category_input == "4":
-        category = "Entertainment"
-    elif category_input == "5":
-        category = "Others"
-    else:
-        print("Invalid Selection")
+    expense_amount, week_day, category = get_user_input()
 
-    with open("records.csv", "a") as file:
-        writer = csv.DictWriter(file, fieldnames=["expense_amount", "week_day", "category"])
-        if file.tell() == 0:
-            writer.writeheader()
-        writer.writerow({"expense_amount": expense_amount, "week_day": week_day,"category":category})
-    print("**Added Successfully**")
+    if expense_amount is not None and week_day is not None and category is not None:
+        with open("records.csv", "a", newline='') as file:
+            writer = csv.DictWriter(file, fieldnames=["expense_amount", "week_day", "category"])
+            if file.tell() == 0:
+                writer.writeheader()
+            writer.writerow({"expense_amount": expense_amount, "week_day": week_day, "category": category})
+        print("**Added Successfully**")
+
     main()
 
 def view_expense():
