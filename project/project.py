@@ -4,6 +4,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from prettytable import PrettyTable
+from prettytable import MSWORD_FRIENDLY
 def record_expense():
     expense_amount = input("Enter the amount spent :").strip()
     week_day = input("Enter the day of expenditure :").lower().strip()
@@ -118,6 +119,7 @@ def main():
         menu_table.add_row(["4", "View Stats"])
         menu_table.add_row(["5", "Exit"])
         print("Welcome to Expense Tracker")
+        menu_table.set_style(MSWORD_FRIENDLY)
         print(menu_table)
 
         choice = input("Enter your choice\n").strip()
