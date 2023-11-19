@@ -33,7 +33,7 @@ def record_expense():
         if file.tell() == 0:
             writer.writeheader()
         writer.writerow({"expense_amount": expense_amount, "week_day": week_day,"category":category})
-
+    print("**Added Successfully**")
     main()
 
 def view_expense():
@@ -82,7 +82,7 @@ def delete_expense():
         if file.tell() == 0:
             writer.writeheader()
         writer.writerows(rows_to_keep)
-        print("Deleted successfully")
+    print("Deleted successfully")
     main()
 
 def view_stats():
