@@ -51,11 +51,17 @@ def view_expense():
             expense_by_day[week_day] = expense_by_day.get(week_day, 0) + expense_amount
     print(f"Total Expenses :{total_expense}")
     print("Expense by Category:")
+    cat_table = PrettyTable()
+    cat_table.field_names = ["Category", "Expenses"]
     for category, category_expense in expense_by_category.items():
-            print(f"{category}: {category_expense}")
+            cat_table.add_row([category, category_expense])
+    print(cat_table)
 
+    week_table = PrettyTable()
+    week_table.field_names = ["Day", "Expenses"]
     for day, day_expense in expense_by_day.items():
-            print(f"{day}: {day_expense}")
+            week_table.add_row([day, day_expense])
+    print(week_table)
 
     main()
 
