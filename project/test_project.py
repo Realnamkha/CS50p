@@ -6,6 +6,6 @@ def test_get_user_input():
     week_day = sunday
     category_input = "1"
 
-    assert get_user_input() == expense_amount,week_day,category_inpu
+    assert get_user_input() == expense_amount,week_day,category_input
 
 
