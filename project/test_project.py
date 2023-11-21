@@ -2,7 +2,7 @@
 import pytest
 from project import get_user_input, record_expense, view_expense, delete_expense, view_stats
 def test_get_user_input():
-    get_user_input.expense_amount = "1000"
+    get_user_input.expense_amount = 1000
     get_user_input.week_day = "sunday"
     get_user_input.category_input = "1"  # Define and set the value of category_input
     if get_user_input.category_input == "1":
