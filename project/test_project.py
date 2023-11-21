@@ -35,5 +35,20 @@ def test_get_user_input_not_valid(monkeypatch):
 def test_record_expense_valid_input():
     with patch('project.get_user_input', return_value=(1000, 'sunday', 'Food')):
         with patch('builtins.open'):
-            record_expense()
+            # Capture the printed output
+            with patch('builtins.print') as mock_print:
+                record_expense()
 
+    # Assertions for valid input
+    mock_print.assert_called_once_with("**Added Successfully**")
+
+def test_record_expense_invalid_input():
+    # Test when expense_amount is None
+    with patch('project.get_user_input', return_value=(None, 'sunday', 'Food')):
+        with patch('builtins.open'):
+            # Capture the printed output
+            with patch('builtins.print') as mock_print:
+                record_expense()
+
+    # Assertions for invalid input
+    mock_print.assert_called_once_with("Invalid expense amount. Please enter a valid number.")
