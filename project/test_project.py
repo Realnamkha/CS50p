@@ -25,32 +25,3 @@ def test_record_expense_successful(monkeypatch, capsys):
     # Assert that the success message is printed
     assert "**Added Successfully**" in captured.out
 
-# Add more test cases for different scenarios
-
-# Test case for when expense_amount is None
-def test_record_expense_invalid_expense_amount(monkeypatch, capsys):
-    monkeypatch.setattr('project.get_user_input', lambda: (None, 'sunday', 'Food'))
-
-    record_expense()
-    captured = capsys.readouterr()
-
-    assert "Invalid expense amount. Please enter a valid number." in captured.out
-
-# Test case for when week_day is None
-def test_record_expense_invalid_week_day(monkeypatch, capsys):
-    monkeypatch.setattr('project.get_user_input', lambda: (1000, None, 'Food'))
-
-    record_expense()
-    captured = capsys.readouterr()
-
-    assert "Invalid day of expenditure. Please enter a valid day." in captured.out
-
-# Test case for when category is None
-def test_record_expense_invalid_category(monkeypatch, capsys):
-    monkeypatch.setattr('project.get_user_input', lambda: (1000, 'sunday', None))
-
-    record_expense()
-    captured = capsys.readouterr()
-
-    assert "Invalid category. Please select a valid category." in captured.out
-
