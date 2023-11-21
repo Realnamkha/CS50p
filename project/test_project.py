@@ -24,6 +24,17 @@ def test_get_user_input_not_valid():
     assert result != expected_result
 
 
+def test_get_user_input_another(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda _: "1000")  # Mock expense amount input
+    monkeypatch.setattr('builtins.input', lambda _: "sunday")  # Mock week_day input
+    monkeypatch.setattr('builtins.input', lambda _: "1")  # Mock category input
+
+    result = get_user_input()
+
+    # Check the values against the expected result
+    expected_result = (1000, "sunday", "Food")
+    assert result == expected_result
+
 
 
 
