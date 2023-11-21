@@ -5,12 +5,12 @@ def test_get_user_input():
     get_user_input.expense_amount = "1000"
     get_user_input.week_day = "sunday"
     get_user_input.category_input = "1"  # Define and set the value of category_input
-    if category_input == "1":
+    if get_user_input.category_input == "1":
         category = "Food"
-
+    result = (get_user_input.expense_amount,get_user_input.week_day, category)
     # Check the values against the expected result
     expected_result = (1000, "sunday", "Food")
-    assert (result_expense_amount, result_week_day, result_category) == expected_result
+    assert result == expected_result
 
 
 
