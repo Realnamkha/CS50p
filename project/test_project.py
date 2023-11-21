@@ -25,9 +25,12 @@ def test_get_user_input_not_valid():
 
 
 def test_get_user_input_another(monkeypatch):
-    monkeypatch.setattr('builtins.input', lambda _: "40")  # Mock expense amount input
-    monkeypatch.setattr('builtins.input', lambda _: "sunday")  # Mock week_day input
-    monkeypatch.setattr('builtins.input', lambda _: "3")  # Mock category input
+    mock_inputs = ["1000", "sunday", "1"]
+
+    def mock_input(_):
+        return mock_inputs.pop(0)
+
+    monkeypatch.setattr('builtins.input', mock_input)
 
     result = get_user_input()
 
