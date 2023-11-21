@@ -44,7 +44,6 @@ def record_expense():
             writer.writerow({"expense_amount": expense_amount, "week_day": week_day, "category": category})
         print("**Added Successfully**")
 
-    main()
 
 def view_expense():
     print("***View_Expenses***")
