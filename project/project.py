@@ -7,9 +7,8 @@ from prettytable import PrettyTable
 from prettytable import DOUBLE_BORDER
 
 def get_user_input():
-    expense_amount = input("Enter the amount spent: ").strip()
     try:
-        expense_amount = int(expense_amount)
+        expense_amount = int(input("Enter the amount spent: ").strip())
     except ValueError:
         print("Invalid expense amount. Please enter a valid number.")
         return None, None, None
