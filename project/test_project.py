@@ -40,7 +40,7 @@ def test_get_user_input_invalid_amount(monkeypatch):
         result = get_user_input()
 
     mock_print.assert_called_once_with("Invalid expense amount. Please enter a valid number.")
-
+    assert result is None
 
 
 def test_record_expense_valid_input():
