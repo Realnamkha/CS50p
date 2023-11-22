@@ -14,8 +14,13 @@ def get_user_input():
         return None, None, None
 
     weekdays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
-    week_day = input("Enter the day of expenditure: ").lower().strip()
-    
+    try:
+        week_day = input("Enter the day of expenditure: ").lower().strip()
+        if week_day not in weekdays:
+            raise ValueError("Empty or invalid day input")
+    except ValueError:
+        print("Invalid day input. Please enter a valid day.")
+        return None, None, None
     print("***Categories***")
     print("1 Food")
     print("2 Stationary")
