@@ -43,21 +43,21 @@ def test_get_user_input_invalid_week(monkeypatch):
     assert week_day is None
     assert category is None
 
-# def test_get_user_input_invalid_category(monkeypatch):
-#     mock_inputs = ["100", "sunday", "10"]
+def test_get_user_input_invalid_category(monkeypatch):
+    mock_inputs = ["100", "sunday", "10"]
 
-#     def mock_input(_):
-#         return mock_inputs.pop(0)
+    def mock_input(_):
+        return mock_inputs.pop(0)
 
-#     monkeypatch.setattr('builtins.input', mock_input)
+    monkeypatch.setattr('builtins.input', mock_input)
 
-#     with patch('builtins.print') as mock_print:
-#         expense_amount, week_day, category = get_user_input()
+    with patch('builtins.print') as mock_print:
+        expense_amount, week_day, category = get_user_input()
 
-#     mock_print.assert_called_once_with("Invalid category selection. Please enter a number between 1 and 5.")
-#     assert expense_amount is None
-#     assert week_day is None
-#     assert category is None
+    mock_print.assert_called_once_with("Invalid category selection. Please enter a number between 1 and 5.")
+    assert expense_amount is None
+    assert week_day is None
+    assert category is None
 
 
 
