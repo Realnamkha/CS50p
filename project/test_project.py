@@ -31,16 +31,20 @@ def test_get_user_input(monkeypatch):
 #     assert result != expected_result
 def test_get_user_input_invalid_amount(monkeypatch):
     mock_inputs = [None, "sunday", "1"]
+
     def mock_input(_):
         return mock_inputs.pop(0)
 
     monkeypatch.setattr('builtins.input', mock_input)
 
-    with patch('builtins.open'), patch('builtins.print') as mock_print:
-        result = get_user_input()
+    with patch('builtins.print') as mock_print:
+        expense_amount, week_day, category = get_user_input()
 
     mock_print.assert_called_once_with("Invalid expense amount. Please enter a valid number.")
-    assert result is None
+    assert expense_amount is None
+    assert week_day is None
+    assert category is None
+
 
 
 def test_record_expense_valid_input():
