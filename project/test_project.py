@@ -31,13 +31,13 @@ def test_get_user_input(monkeypatch):
 #     assert result != expected_result
 
 def test_get_user_input_invalid_amount():
-    mock_inputs = ["Name", "sunday", "1"]
+    mock_inputs = [None, "sunday", "1"]
     def mock_input(_):
         return mock_inputs.pop(0)
     monkeypatch.setattr('builtins.input', mock_input)
     result = get_user_input()
     expected_result = (1000, "sunday", "Food")
-    
+
 
 
 def test_record_expense_valid_input():
