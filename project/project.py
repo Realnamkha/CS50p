@@ -13,8 +13,9 @@ def get_user_input():
         print("Invalid expense amount. Please enter a valid number.")
         return None, None, None
 
+    weekdays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
     week_day = input("Enter the day of expenditure: ").lower().strip()
-    weeks = ["sunday","monday"]
+    
     print("***Categories***")
     print("1 Food")
     print("2 Stationary")
