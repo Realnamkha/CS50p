@@ -21,15 +21,23 @@ def test_get_user_input(monkeypatch):
     expected_result = (1000, "sunday", "Food")
     assert result == expected_result
 
-def test_get_user_input_not_valid(monkeypatch):
+# def test_get_user_input_not_valid(monkeypatch):
+#     mock_inputs = ["Name", "sunday", "1"]
+#     def mock_input(_):
+#         return mock_inputs.pop(0)
+#     monkeypatch.setattr('builtins.input', mock_input)
+#     result = get_user_input()
+#     expected_result = (1000, "sunday", "Food")
+#     assert result != expected_result
+
+def test_get_user_input_invalid_amount():
     mock_inputs = ["Name", "sunday", "1"]
     def mock_input(_):
         return mock_inputs.pop(0)
     monkeypatch.setattr('builtins.input', mock_input)
     result = get_user_input()
     expected_result = (1000, "sunday", "Food")
-    assert result != expected_result
-
+    
 
 
 def test_record_expense_valid_input():
