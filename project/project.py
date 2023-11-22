@@ -14,7 +14,7 @@ def get_user_input():
         return None, None, None
 
     week_day = input("Enter the day of expenditure: ").lower().strip()
-
+    weeks = ["sunday","monday"]
     print("***Categories***")
     print("1 Food")
     print("2 Stationary")
