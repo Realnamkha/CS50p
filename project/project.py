@@ -50,6 +50,8 @@ def record_expense():
             writer.writerow({"expense_amount": expense_amount, "week_day": week_day, "category": category})
         print("**Added Successfully**")
 
+    main()
+
 def view_expense():
     print("***View_Expenses***")
     with open("records.csv") as file:
@@ -77,7 +79,7 @@ def view_expense():
     for day, day_expense in expense_by_day.items():
             week_table.add_row([day, day_expense])
     print(week_table)
-
+    main()
 
 def delete_expense():
     amount, category, day = input("Enter the amount to be deleted, category, and day (separated by spaces): ").split()
