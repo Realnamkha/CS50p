@@ -50,7 +50,6 @@ def record_expense():
             writer.writerow({"expense_amount": expense_amount, "week_day": week_day, "category": category})
         print("**Added Successfully**")
 
-    main()
 
 def view_expense():
     print("***View_Expenses***")
@@ -79,7 +78,6 @@ def view_expense():
     for day, day_expense in expense_by_day.items():
             week_table.add_row([day, day_expense])
     print(week_table)
-    main()
 
 def delete_expense():
     amount, category, day = input("Enter the amount to be deleted, category, and day (separated by spaces): ").split()
@@ -98,7 +96,6 @@ def delete_expense():
             writer.writeheader()
         writer.writerows(rows_to_keep)
     print("Deleted successfully")
-    main()
 
 def view_stats():
     df = pd.read_csv('records.csv')
@@ -121,8 +118,6 @@ def view_stats():
 
     plt.tight_layout()
     plt.show()
-
-    main()
 def main():
     while True:
         menu_table = PrettyTable()
