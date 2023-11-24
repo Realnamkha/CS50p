@@ -1,9 +1,6 @@
-students = [
-    {"name": "Hermoine", "house": "Gryffindor", "patronus": "Otter"},
-    {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
-    {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russell terrier"},
-    {"name": "Draco", "house": "Slytherin", "patronus": None},
-]
+try:
+    x = int(input("What's x?"))
+except ValueError:
+    print("x is not an integer")
 
-for student in students:
-    print(student["name"], student["house"], student["patronus"], sep=", ")
+print(f"x is {x}")
