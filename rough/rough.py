@@ -1,6 +1,13 @@
-try:
-    x = int(input("What's x?"))
-except ValueError:
-    print("x is not an integer")
+def main():
+    yell(["This", "is", "CS50"])
 
-print(f"x is {x}")
+
+def yell(words):
+    uppercased = []
+    for word in words:
+        uppercased.append(word.upper())
+    print(*uppercased)
+
+
+if __name__ == "__main__":
+    main()
