@@ -1,13 +1,4 @@
-def main():
-    yell(["This", "is", "CS50"])
+students = ["Hermione", "Harry", "Ron"]
 
-
-def yell(words):
-    uppercased = []
-    for word in words:
-        uppercased.append(word.upper())
-    print(*uppercased)
-
-
-if __name__ == "__main__":
-    main()
+for i in range(len(students)):
+    print(i + 1, students[i])
